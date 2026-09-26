@@ -1,0 +1,35 @@
+name: Sync LinkedIn & Technical Articles (30-Day Cron)
+
+on:
+  schedule:
+    # Runs at 00:00 UTC on the 1st day of every month (every 30 days)
+    - cron: '0 0 1 * *'
+  workflow_dispatch: # Allows 1-click manual execution from GitHub Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Articles Synchronization
+        env:
+          LINKEDIN_FEED_URL: ${{ secrets.LINKEDIN_FEED_URL }}
+          ARTICLES_RSS_URL: ${{ secrets.ARTICLES_RSS_URL }}
+        run: node scripts/sync_articles.js
+
+      - name: Commit and Push Changes If Updated
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/data/articles.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(articles): automated 30-day sync of top LinkedIn articles" && git push)

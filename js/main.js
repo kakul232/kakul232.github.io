@@ -6,9 +6,11 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initExperienceCalculator();
   initParticleBackground();
   initTypewriter();
   initTerminal();
+  initArticles();
   initProjectFiltering();
   initGitHubMetrics();
   initPlaygroundDemo();
@@ -16,6 +18,102 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initContactForm();
 });
+
+/* ==========================================================================
+   0. ENTERPRISE & RELEVANT EXPERIENCE CALCULATOR
+   ========================================================================== */
+function initExperienceCalculator() {
+  const now = new Date();
+
+  function calcTenure(startYear, startMonth) {
+    // startMonth is 1-indexed (1 = Jan, 5 = May, 9 = Sep, 10 = Oct)
+    const startDate = new Date(startYear, startMonth - 1, 1);
+    const diffMs = now.getTime() - startDate.getTime();
+    const diffDays = diffMs / (1000 * 60 * 60 * 24);
+    const yearsFloat = diffDays / 365.2425;
+    const floorYears = Math.max(1, Math.floor(yearsFloat));
+    const remainingMonths = Math.floor((yearsFloat - floorYears) * 12);
+
+    let formatted = `${floorYears}+ Years`;
+    let shortFormatted = `${floorYears}+ Yrs`;
+    if (floorYears < 3 && remainingMonths >= 6) {
+      formatted = `${floorYears}.5+ Years`;
+      shortFormatted = `${floorYears}.5+ Yrs`;
+    }
+
+    return {
+      years: floorYears,
+      months: remainingMonths,
+      exactYears: yearsFloat.toFixed(1),
+      formatted: formatted,
+      short: shortFormatted
+    };
+  }
+
+  // Anchor career milestones directly from resume:
+  // - BitGiving (Enterprise start): Jan 2016
+  // - Python (FastAPI, AI microservices, data scripting): May 2020
+  // - AI (watsonx.ai, Generative AI Foundations, Agentic AI, RAG): Oct 2022
+  // - React (T9L, Glowderma MERN, Next.js at IBM): Sep 2018
+  // - Angular (Angular 2+ Certified UC-9WAWTYP9, SPAs at IBM): Jan 2019
+  // - NodeJs (Express, REST APIs, Microservices, Next.js server): Sep 2018
+  const expData = {
+    total: calcTenure(2016, 1),
+    python: calcTenure(2020, 5),
+    ai: calcTenure(2022, 10),
+    react: calcTenure(2018, 9),
+    angular: calcTenure(2019, 1),
+    nodejs: calcTenure(2018, 9)
+  };
+
+  window.autoCalculatedExperience = expData;
+
+  // 1. Update Hero Status Badge
+  const heroBadge = document.getElementById('auto-total-exp');
+  if (heroBadge) {
+    heroBadge.textContent = `${expData.total.formatted} Enterprise Experience`;
+  }
+
+  // 2. Update Hero Quick Stat
+  const heroStatTotal = document.getElementById('hero-stat-total-exp');
+  if (heroStatTotal) {
+    heroStatTotal.textContent = expData.total.short;
+  }
+
+  // 3. Update Relevant Exp Cards
+  const valMap = {
+    'exp-val-python': expData.python.formatted,
+    'exp-val-ai': expData.ai.formatted,
+    'exp-val-react': expData.react.formatted,
+    'exp-val-angular': expData.angular.formatted,
+    'exp-val-nodejs': expData.nodejs.formatted
+  };
+
+  Object.entries(valMap).forEach(([id, text]) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = text;
+  });
+
+  // 4. Update Experience Section Subtitle
+  const expSummary = document.getElementById('exp-total-years-summary');
+  if (expSummary) {
+    expSummary.textContent = expData.total.formatted;
+  }
+
+  // 5. Update Skill Matrix Tenure Badges
+  const skillTenureMap = {
+    'skill-tenure-python': expData.python.short,
+    'skill-tenure-ai': expData.ai.short,
+    'skill-tenure-react': expData.react.short,
+    'skill-tenure-angular': expData.angular.short,
+    'skill-tenure-nodejs': expData.nodejs.short
+  };
+
+  Object.entries(skillTenureMap).forEach(([id, text]) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = text;
+  });
+}
 
 /* ==========================================================================
    1. PARTICLE CONSTELLATION CANVAS BACKGROUND
@@ -125,11 +223,12 @@ function initTypewriter() {
   if (!el) return;
 
   const roles = [
+    'Python | JavaScript | GenAI & Agentic AI',
+    'Core Architecture & Systems',
+    'AI Cybersecurity (OWASP • NIST)',
     'Senior Full-Stack Engineer',
     'Application Consultant @ IBM',
-    'GenAI & watsonx.ai Specialist',
-    'Micro-Frontend & Next.js Architect',
-    'Open Source Creator (@kakul232)'
+    'Micro-Frontend & Next.js Architect'
   ];
 
   let roleIdx = 0;
@@ -175,19 +274,55 @@ function initTerminal() {
 
   const commands = {
     help: `Available commands:
-  • <span class="term-highlight">bio</span>            : Professional summary & 8+ yrs experience
+  • <span class="term-highlight">bio</span>            : Senior Full-Stack Engineer & Consultant summary
   • <span class="term-highlight">experience</span>     : Timeline: IBM, Glowderma, T9L, BitGiving
-  • <span class="term-highlight">ai</span>             : watsonx.ai, LLM agents & RAG architecture
+  • <span class="term-highlight">relexp</span>         : Live auto-calculated experience (Python, AI, React, Angular, NodeJs)
+  • <span class="term-highlight">ai</span>             : Python, Agentic AI, MCP Servers, watsonx.ai
+  • <span class="term-highlight">security</span>       : AI Cybersecurity (OWASP Top 10 for LLMs, NIST AI RMF)
   • <span class="term-highlight">badges</span>         : Verified Credly & IBM certifications
-  • <span class="term-highlight">skills</span>         : Tech stack & frontend/backend matrix
+  • <span class="term-highlight">articles</span>       : Technical publications & LinkedIn articles
+  • <span class="term-highlight">skills</span>         : Tech stack & frontend/backend/AI matrix
   • <span class="term-highlight">projects</span>       : Open source & architectural repositories
   • <span class="term-highlight">education</span>      : B.Tech in IT (GGSCET) & Academics
   • <span class="term-highlight">contact</span>        : Direct phone, email, LinkedIn, Credly
   • <span class="term-highlight">clear</span>          : Clear terminal screen`,
 
-    bio: `Kakul Sarma is a Senior Full-Stack Engineer and Application Consultant with over 8 years of comprehensive experience architecting, developing, and deploying scalable enterprise systems and modern AI-driven integrations. Expertise across modern JavaScript ecosystems (Next.js SSR/App Router, React, Angular), Micro-Frontend architectures (Module Federation), and intelligent GenAI/LLM middleware at IBM.`,
+    relexp: () => {
+      const exp = window.autoCalculatedExperience;
+      if (!exp) return 'Experience data initializing...';
+      return `# RELEVANT EXPERIENCE (Live Auto-Calculated):
+  • <span class="term-highlight">Enterprise Total</span> : ${exp.total.formatted} (Started Jan 2016 at BitGiving)
+  -------------------------------------------------------------
+  • <span class="term-highlight">Python</span>           : ${exp.python.formatted} (FastAPI &bull; AI Middleware &bull; Data Scripting)
+  • <span class="term-highlight">AI / GenAI</span>       : ${exp.ai.formatted} (watsonx.ai &bull; Agentic AI &bull; RAG &bull; MCP)
+  • <span class="term-highlight">React</span>            : ${exp.react.formatted} (Next.js SSR/App Router &bull; Module Federation)
+  • <span class="term-highlight">Angular</span>          : ${exp.angular.formatted} (Angular 2+ Certified UC-9WAWTYP9 &bull; SPAs)
+  • <span class="term-highlight">NodeJs</span>           : ${exp.nodejs.formatted} (Express &bull; REST APIs &bull; Backend Runtime)`;
+    },
 
-    experience: `Career Milestones:
+    calculate: () => commands.relexp(),
+
+    articles: `Published Technical Articles & Insights on LinkedIn:
+  1. <a href="https://www.linkedin.com/in/kakulsarma/" target="_blank" class="term-highlight">Architecting Scalable Micro-Frontends with Module Federation in Enterprise Next.js</a>
+     - Decoupling autonomous business domains & eliminating global bundle overhead.
+  2. <a href="https://www.linkedin.com/in/kakulsarma/" target="_blank" class="term-highlight">Operationalizing watsonx.ai & RAG Pipelines in Production JavaScript Backends</a>
+     - Enterprise LLM integration, vector embeddings & context chunking with Node.js.
+  3. <a href="https://www.linkedin.com/in/kakulsarma/" target="_blank" class="term-highlight">Section 508 Compliance & High-Performance Rendering in Large-Scale SPAs</a>
+     - Inclusive accessibility engineering without compromising rendering velocity.
+  Follow: <a href="https://www.linkedin.com/in/kakulsarma/" target="_blank" class="term-highlight">linkedin.com/in/kakulsarma</a>`,
+
+    publications: `(Alias for articles) Type <span class="term-highlight">articles</span> for full publication list.`,
+
+    bio: () => {
+      const exp = window.autoCalculatedExperience;
+      const totalStr = exp ? exp.total.formatted : '8+ Years';
+      return `Dynamic and results-driven Senior Full-Stack Engineer and Application Consultant with extensive background across modern Python, JavaScript ecosystems (Next.js SSR/App Router, React, Angular 2+), distributed Micro-Frontend architectures (Module Federation), and intelligent GenAI/LLM middleware at IBM. Over ${totalStr} of enterprise architectural excellence.`;
+    },
+
+    experience: () => {
+      const exp = window.autoCalculatedExperience;
+      const totalStr = exp ? exp.total.formatted : '8+ Years';
+      return `Career Milestones (${totalStr} Enterprise Experience):
   • <span class="term-highlight">Application Consultant (JS Full-Stack)</span> | IBM India Pvt Ltd (Oct 2024 – Present)
     Architecting enterprise web systems with Next.js full-stack & distributed micro-frontends.
   • <span class="term-highlight">Application Developer (JS Frontend)</span> | IBM India Pvt Ltd (June 2021 – Oct 2024)
@@ -195,13 +330,32 @@ function initTerminal() {
   • <span class="term-highlight">Software Engineer</span> | Glowderma Pvt Ltd, Mumbai (May 2020 – May 2021)
     MERN (MongoDB, Express, React, Node.js) full-stack ecosystem.
   • <span class="term-highlight">Software Engineer</span> | T9L, Delhi (Sep 2018 – May 2020)
-  • <span class="term-highlight">Software Engineer</span> | BitGiving, Delhi (Jan 2016 – Aug 2018)`,
+  • <span class="term-highlight">Software Engineer</span> | BitGiving, Delhi (Jan 2016 – Aug 2018)
+  -------------------------------------------------------------
+  Type <span class="term-highlight">relexp</span> to view auto-calculated tenure across Python, AI, React, Angular, NodeJs.`;
+    },
 
     ai: `AI & Intelligent Middleware Stack:
+  • <span class="term-highlight">Core Domain</span>: Python | JavaScript | GenAI & Agentic AI | Core Architecture
   • <span class="term-highlight">watsonx.ai</span> (IBM Essentials & Deep Dive Certified)
-  • <span class="term-highlight">LLM Integration</span> (OpenAI, Anthropic, watsonx)
-  • <span class="term-highlight">RAG Architectures</span> (Retrieval-Augmented Generation, Vector Embeddings)
-  • <span class="term-highlight">Prompt Engineering</span> & Autonomous Agent Orchestration`,
+  • <span class="term-highlight">MCP Servers</span> (Model Context Protocol & Custom Tool Calling)
+  • <span class="term-highlight">Python & FastAPI</span> (Autonomous Agentic AI, Tool Chains & Middleware)
+  • <span class="term-highlight">LLM Integration</span> (OpenAI, Anthropic Claude, IBM Granite, watsonx)
+  • <span class="term-highlight">RAG Architectures</span> (Vector Embeddings, Hybrid Search, Milvus/Chroma)
+  • <span class="term-highlight">AI Cybersecurity</span> (OWASP Top 10 for LLMs, NIST AI RMF)`,
+
+    security: `AI Cybersecurity & Governance Frameworks:
+  • <span class="term-highlight">OWASP Top 10 for LLMs</span>:
+    - LLM01: Prompt Injection mitigation (input sanitization, dual-LLM arbiters, prompt firewalls)
+    - LLM02: Insecure Output Handling & context leakage prevention
+    - LLM06: Sensitive Information Disclosure & PII stripping filters
+    - LLM08: Vector & Embedding poisoning defense
+  • <span class="term-highlight">NIST AI RMF (Risk Management Framework)</span>:
+    - GOVERN, MAP, MEASURE, MANAGE lifecycle controls
+    - Threat modeling for autonomous agentic loops & tool calling
+  • <span class="term-highlight">Agent Sandboxing & MCP Security</span>:
+    - Principle of least privilege for Model Context Protocol (MCP) tool execution
+    - Human-in-the-loop (HITL) gates for high-impact API integrations`,
 
     badges: `Verified Professional Badges (IBM / Credly):
   1. Application Consultant - Cloud Full Stack (IBM)
@@ -214,12 +368,22 @@ function initTerminal() {
   8. IBM Agile Explorer (IBM)
   Profile: <a href="https://www.credly.com/users/kakul-sarma.a09a1b12" target="_blank" class="term-highlight">credly.com/users/kakul-sarma.a09a1b12</a>`,
 
-    skills: `Core Competencies:
-  [Frontend]   Next.js (App Router/SSR), React, Redux, Angular 2+, TypeScript, Micro-Frontends
-  [AI / Data]  watsonx.ai, OpenAI, Prompt Engineering, RAG Architectures, Vector Embeddings
-  [Backend]    Node.js, Express, PHP 5.6+, RESTful APIs, MongoDB, MySQL, Firebase
-  [Cloud]      AWS Serverless, GCP, Git, CI/CD Pipelines, Linux
-  [Specs]      Section 508 Accessibility Compliance, Ionic 4, PhoneGap`,
+    skills: () => {
+      const exp = window.autoCalculatedExperience;
+      const pyYrs = exp ? exp.python.formatted : '4+ Years';
+      const aiYrs = exp ? exp.ai.formatted : '3+ Years';
+      const reactYrs = exp ? exp.react.formatted : '7+ Years';
+      const angYrs = exp ? exp.angular.formatted : '5+ Years';
+      const nodeYrs = exp ? exp.nodejs.formatted : '7+ Years';
+      return `Core Competencies & Auto-Calculated Tech Matrix:
+  [Python (${pyYrs})]    FastAPI, Flask, Scripting, AI Microservices & Agents
+  [AI / GenAI (${aiYrs})] watsonx.ai, MCP Servers, LangChain, RAG Pipelines, Prompt Eng.
+  [React (${reactYrs})]    Next.js (App Router/SSR), React, Redux, Micro-Frontends
+  [Angular (${angYrs})]  Angular 2+ (Certified UC-9WAWTYP9), Component Architecture
+  [NodeJs (${nodeYrs})]   Express, REST APIs, Microservices, Async Event Loops
+  [Security]             OWASP Top 10 for LLMs, NIST AI RMF, Secure Agent Sandboxing
+  [Cloud & Data]         MongoDB, MySQL, PostgreSQL, Vector DBs, AWS Serverless, Docker`;
+    },
 
     projects: `Open Source & Architecture Works:
   1. <a href="https://github.com/kakul232/angular-js-mvc" target="_blank" class="term-highlight">angular-js-mvc</a> - Architectural MVC web application engine
@@ -258,10 +422,21 @@ function initTerminal() {
       const inputs = termInput.parentElement;
       termBody.innerHTML = '';
       termBody.appendChild(inputs);
+    } else if (cmd === 'articles' && globalArticlesData.length > 0) {
+      let list = 'Published Technical Articles & Insights on LinkedIn:\n';
+      globalArticlesData.slice(0, 6).forEach((a, i) => {
+        list += `  ${i + 1}. <a href="${a.url}" target="_blank" class="term-highlight">${escapeHTML(a.title)}</a>\n     - ${escapeHTML(a.snippet.substring(0, 100))}...\n`;
+      });
+      list += `  Follow: <a href="https://www.linkedin.com/in/kakulsarma/" target="_blank" class="term-highlight">linkedin.com/in/kakulsarma</a>`;
+      const outLine = document.createElement('div');
+      outLine.className = 'term-output';
+      outLine.innerHTML = list.replace(/\n/g, '<br>');
+      termBody.insertBefore(outLine, termInput.parentElement);
     } else if (commands[cmd]) {
       const outLine = document.createElement('div');
       outLine.className = 'term-output';
-      outLine.innerHTML = commands[cmd].replace(/\n/g, '<br>');
+      const outputText = typeof commands[cmd] === 'function' ? commands[cmd]() : commands[cmd];
+      outLine.innerHTML = outputText.replace(/\n/g, '<br>');
       termBody.insertBefore(outLine, termInput.parentElement);
     } else {
       const errLine = document.createElement('div');
@@ -301,6 +476,66 @@ function escapeHTML(str) {
       '"': '&quot;'
     }[tag] || tag)
   );
+}
+
+let globalArticlesData = [];
+
+/* ==========================================================================
+   3.5 DYNAMIC ARTICLES DATA LOADER (30-DAY CRON INTEGRATION)
+   ========================================================================== */
+async function initArticles() {
+  const container = document.getElementById('articles-container');
+  if (!container) return;
+
+  try {
+    const res = await fetch('assets/data/articles.json');
+    if (res.ok) {
+      const articles = await res.json();
+      if (Array.isArray(articles) && articles.length > 0) {
+        globalArticlesData = articles;
+        renderArticles(articles, container);
+      }
+    }
+  } catch (err) {
+    console.log('[Articles] Using static fallback articles:', err);
+  }
+}
+
+function renderArticles(articles, container) {
+  container.innerHTML = '';
+  articles.slice(0, 6).forEach((art) => {
+    const card = document.createElement('a');
+    card.href = art.url || 'https://www.linkedin.com/in/kakulsarma/';
+    card.target = '_blank';
+    card.rel = 'noopener noreferrer';
+    card.className = 'article-card';
+    if (art.id) card.id = art.id;
+
+    card.innerHTML = `
+      <div class="article-meta-top">
+        <span class="article-tag">${escapeHTML(art.tag || 'Tech Insight')}</span>
+        <span class="article-read-time">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          ${escapeHTML(art.readTime || '6 min read')}
+        </span>
+      </div>
+      <h3 class="article-title">${escapeHTML(art.title)}</h3>
+      <p class="article-snippet">${escapeHTML(art.snippet)}</p>
+      <div class="article-footer">
+        <span class="article-linkedin-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+          Read on LinkedIn
+        </span>
+        <span>&rarr;</span>
+      </div>
+    `;
+    container.appendChild(card);
+  });
 }
 
 /* ==========================================================================

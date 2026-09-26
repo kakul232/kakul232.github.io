@@ -25,6 +25,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   
+  <!-- Devicon Programming Language & Development Tool Icons -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -42,7 +45,7 @@
     <div class="container nav-container">
       <a href="#" class="logo-brand" id="brand-logo" aria-label="Kakul Sarma Home">
         <div class="logo-icon">KS</div>
-        <span>Kakul Sarma</span>
+        <span class="logo-name">Kakul Sarma</span>
         <span class="logo-tag">IBM Consultant</span>
       </a>
 
@@ -51,11 +54,11 @@
         <ul class="nav-menu" id="nav-menu">
           <li><a href="#about" class="nav-link" id="nav-about">About</a></li>
           <li><a href="#badges" class="nav-link" id="nav-badges">Badges</a></li>
-          <li><a href="#ai-stack" class="nav-link" id="nav-ai-stack">AI Stack</a></li>
           <li><a href="#experience" class="nav-link" id="nav-experience">Experience</a></li>
-          <li><a href="#skills" class="nav-link" id="nav-skills">Competencies</a></li>
+          <li><a href="#skills" class="nav-link" id="nav-skills">Skills &amp; AI</a></li>
+          <li><a href="#articles" class="nav-link" id="nav-articles">Articles</a></li>
           <li><a href="#projects" class="nav-link" id="nav-projects">Projects</a></li>
-          <li><a href="#terminal" class="nav-link" id="nav-terminal">CLI Console</a></li>
+          <li><a href="#terminal" class="nav-link" id="nav-terminal">Console</a></li>
           <li><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
         </ul>
       </nav>
@@ -100,24 +103,27 @@
         <div class="status-badge-group">
           <div class="status-badge" id="hero-status">
             <span class="status-pulse"></span>
-            <span>8+ Years Enterprise Experience</span>
+            <span id="auto-total-exp">8+ Years Enterprise Experience</span>
           </div>
           <div class="ibm-badge-hero">
             <span>IBM India &bull; Application Consultant</span>
           </div>
+          <div class="ibm-badge-hero" style="background:rgba(0, 242, 254, 0.12); border-color:rgba(0, 242, 254, 0.3); color:#38bdf8;">
+            <span>&#x1F6E1;&#xFE0F; AI Cybersecurity &bull; OWASP &bull; NIST</span>
+          </div>
         </div>
 
         <h1 class="hero-title">
-          Architecting <span class="gradient-text">Enterprise Web Systems</span> &amp; Modern AI Integrations.
+          Python | JavaScript | <span class="gradient-text">GenAI &amp; Agentic AI</span>
         </h1>
 
         <div class="hero-role-wrapper">
-          <span>Specializing in</span>
+          <span style="color:var(--accent-cyan); font-weight:700;">Core Architecture &bull;</span>
           <span class="typed-role" id="typed-text"></span>
         </div>
 
         <p class="hero-desc">
-          Dynamic and results-driven <strong>Senior Full-Stack Engineer and Application Consultant</strong> with extensive background across modern JavaScript ecosystems (Next.js SSR/App Router, React, Angular 2+), distributed Micro-Frontend architectures (Module Federation), and intelligent GenAI/LLM middleware at IBM.
+          Dynamic and results-driven <strong>Senior Full-Stack Engineer and Application Consultant</strong> with extensive background across modern <strong>Python</strong>, <strong>JavaScript ecosystems</strong> (Next.js SSR/App Router, React, Angular 2+), distributed Micro-Frontend architectures (Module Federation), and intelligent GenAI/LLM middleware at IBM.
         </p>
 
         <div class="hero-cta-group">
@@ -146,23 +152,90 @@
           </a>
         </div>
 
+        <!-- ==================================================================
+             #RELEVANT EXP - AUTO CALCULATED TENURE PANEL
+             ================================================================== -->
+        <div class="relevant-exp-panel" id="relevant-exp-panel">
+          <div class="rel-exp-header">
+            <div class="rel-exp-title-wrap">
+              <span class="rel-exp-badge">#Relevant Exp</span>
+            </div>
+            <div class="rel-exp-status" title="Computed live from career milestones">
+              <span class="rel-live-indicator"></span>
+              <span class="rel-calc-label">Auto-Calculated Live</span>
+            </div>
+          </div>
+
+          <div class="rel-exp-grid">
+            <!-- Python -->
+            <div class="rel-exp-card" data-tech="python">
+              <div class="rel-exp-top">
+                <span class="rel-tech-tag">Python</span>
+                <span class="rel-tech-icon"><i class="devicon-python-plain colored"></i></span>
+              </div>
+              <div class="rel-exp-val" id="exp-val-python">--</div>
+              <div class="rel-exp-sub">FastAPI &bull; AI Middleware</div>
+            </div>
+
+            <!-- AI -->
+            <div class="rel-exp-card" data-tech="ai">
+              <div class="rel-exp-top">
+                <span class="rel-tech-tag">AI</span>
+                <span class="rel-tech-icon"><i class="devicon-tensorflow-original colored"></i></span>
+              </div>
+              <div class="rel-exp-val" id="exp-val-ai">--</div>
+              <div class="rel-exp-sub">watsonx &bull; Agents &bull; RAG</div>
+            </div>
+
+            <!-- React -->
+            <div class="rel-exp-card" data-tech="react">
+              <div class="rel-exp-top">
+                <span class="rel-tech-tag">React</span>
+                <span class="rel-tech-icon"><i class="devicon-react-original colored"></i></span>
+              </div>
+              <div class="rel-exp-val" id="exp-val-react">--</div>
+              <div class="rel-exp-sub">Next.js &bull; Module Fed.</div>
+            </div>
+
+            <!-- Angular -->
+            <div class="rel-exp-card" data-tech="angular">
+              <div class="rel-exp-top">
+                <span class="rel-tech-tag">Angular</span>
+                <span class="rel-tech-icon"><i class="devicon-angularjs-plain colored"></i></span>
+              </div>
+              <div class="rel-exp-val" id="exp-val-angular">--</div>
+              <div class="rel-exp-sub">Angular 2+ &bull; Certified</div>
+            </div>
+
+            <!-- NodeJs -->
+            <div class="rel-exp-card" data-tech="nodejs">
+              <div class="rel-exp-top">
+                <span class="rel-tech-tag">NodeJs</span>
+                <span class="rel-tech-icon"><i class="devicon-nodejs-plain colored"></i></span>
+              </div>
+              <div class="rel-exp-val" id="exp-val-nodejs">--</div>
+              <div class="rel-exp-sub">Express &bull; REST &bull; SSR</div>
+            </div>
+          </div>
+        </div>
+
         <!-- Quick Stats Row -->
         <div class="hero-stats-row">
           <div class="stat-item">
-            <span class="stat-num gradient-text">8+ Yrs</span>
-            <span class="stat-label">Full-Stack Engineering</span>
+            <span class="stat-num gradient-text" id="hero-stat-total-exp">8+ Yrs</span>
+            <span class="stat-label">Enterprise Experience</span>
           </div>
           <div class="stat-item">
-            <span class="stat-num">IBM</span>
-            <span class="stat-label">Consultant &amp; Dev</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-num">8+ Badges</span>
-            <span class="stat-label">Credly Verified</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-num">Next.js &amp; GenAI</span>
+            <span class="stat-num">GenAI &amp; Agentic</span>
             <span class="stat-label">Core Architecture</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">OWASP &amp; NIST</span>
+            <span class="stat-label">AI Cybersecurity</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">IBM Consultant</span>
+            <span class="stat-label">Enterprise Delivery</span>
           </div>
         </div>
       </div>
@@ -187,10 +260,16 @@
 
           <!-- Floating Badges -->
           <div class="floating-pill pill-1">
-            <span style="color:#00f2fe;">&lt;/&gt;</span> Next.js &amp; Micro-Frontends
+            <i class="devicon-python-plain colored"></i>
+            <i class="devicon-nextjs-plain"></i>
+            <span>Python &bull; Next.js &bull; Agentic AI</span>
           </div>
           <div class="floating-pill pill-2">
-            <span style="color:#0f62fe;">&#x2714;</span> IBM watsonx.ai Certified
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" class="pill-shield-icon">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <path d="M9 12l2 2 4-4"></path>
+            </svg>
+            <span>AI Cybersecurity (OWASP &bull; NIST)</span>
           </div>
         </div>
       </div>
@@ -324,13 +403,13 @@
         <!-- AI Card 1 -->
         <div class="ai-card">
           <div class="ai-card-icon">&#x1F9E0;</div>
-          <h3>GenAI &amp; watsonx.ai Integration</h3>
-          <p>Orchestrating intelligent agent microservices, prompt engineering, vector embeddings, and RAG architectures integrated seamlessly with business systems.</p>
+          <h3>GenAI, MCP Servers &amp; watsonx.ai</h3>
+          <p>Orchestrating intelligent agent microservices, Model Context Protocol (MCP) server tool calling, Python services, and RAG architectures integrated with enterprise ecosystems.</p>
           <ul class="ai-feature-list">
-            <li><span class="dot"></span> watsonx.ai &amp; OpenAI API orchestration</li>
+            <li><span class="dot"></span> MCP Server Architectures &amp; Tool Calling</li>
+            <li><span class="dot"></span> Python (FastAPI) &amp; watsonx.ai Pipelines</li>
             <li><span class="dot"></span> Retrieval-Augmented Generation (RAG)</li>
-            <li><span class="dot"></span> Vector Embeddings &amp; Semantic Search</li>
-            <li><span class="dot"></span> Intelligent Middleware Pipelines</li>
+            <li><span class="dot"></span> Vector Embeddings &amp; Autonomous Agent Loops</li>
           </ul>
         </div>
 
@@ -350,17 +429,128 @@
         <!-- AI Card 3 -->
         <div class="ai-card">
           <div class="ai-card-icon">&#x1F6E1;&#xFE0F;</div>
-          <h3>Enterprise Compliance &amp; Standards</h3>
-          <p>Enforcing rigorous software standards, Section 508 accessibility compliance, secure RESTful APIs, and automated CI/CD deployment pipelines.</p>
+          <h3>AI Cybersecurity &amp; Governance</h3>
+          <p>Hardening Agentic AI, MCP tool invocation, and LLM middleware against emerging threat vectors using OWASP Top 10 for LLMs and the NIST AI Risk Management Framework (AI RMF).</p>
           <ul class="ai-feature-list">
-            <li><span class="dot"></span> Section 508 Accessibility Compliance</li>
-            <li><span class="dot"></span> Automated GitHub Actions CI/CD</li>
-            <li><span class="dot"></span> Enterprise Design Thinking methodologies</li>
-            <li><span class="dot"></span> High-velocity Agile leadership</li>
+            <li><span class="dot"></span> OWASP Top 10 for LLMs &amp; Prompt Injection Defense</li>
+            <li><span class="dot"></span> NIST AI RMF &amp; Cybersecurity Framework (CSF) Alignment</li>
+            <li><span class="dot"></span> Autonomous Agent Guardrails &amp; Tool Sandboxing</li>
+            <li><span class="dot"></span> Token Redaction, Data Privacy &amp; Access Controls</li>
           </ul>
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TECHNICAL ARTICLES & LINKEDIN PUBLICATIONS
+       ========================================================================== -->
+  <section id="articles">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Publications &amp; Insights</span>
+        <h2 class="section-title">Technical <span class="gradient-text">Articles &amp; Thought Leadership</span></h2>
+        <p class="section-desc">Deep-dive engineering insights on micro-frontends, enterprise AI integration, Next.js architecture, and distributed systems published on LinkedIn.</p>
+      </div>
+
+      <div class="articles-grid" id="articles-container">
+        
+        <!-- Article 1 -->
+        <a href="https://www.linkedin.com/in/kakulsarma/" target="_blank" rel="noopener noreferrer" class="article-card" id="article-microfrontends">
+          <div class="article-meta-top">
+            <span class="article-tag">Micro-Frontends</span>
+            <span class="article-read-time">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              6 min read
+            </span>
+          </div>
+          <h3 class="article-title">Architecting Scalable Micro-Frontends with Module Federation in Enterprise Next.js</h3>
+          <p class="article-snippet">How to isolate autonomous business domains using Webpack Module Federation while eliminating global bundle overhead, unifying design systems, and retaining instant client rendering speeds across distributed squads.</p>
+          <div class="article-footer">
+            <span class="article-linkedin-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              Read on LinkedIn
+            </span>
+            <span>&rarr;</span>
+          </div>
+        </a>
+
+        <!-- Article 2 -->
+        <a href="https://www.linkedin.com/in/kakulsarma/" target="_blank" rel="noopener noreferrer" class="article-card" id="article-watsonx">
+          <div class="article-meta-top">
+            <span class="article-tag">GenAI &amp; watsonx.ai</span>
+            <span class="article-read-time">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              8 min read
+            </span>
+          </div>
+          <h3 class="article-title">Operationalizing watsonx.ai &amp; RAG Pipelines in Production JavaScript Backends</h3>
+          <p class="article-snippet">A pragmatic guide to bridging enterprise LLM capabilities (watsonx.ai, OpenAI) with Node.js microservices. Covers vector embeddings, context chunking, prompt engineering, and intelligent fallback strategies for mission-critical apps.</p>
+          <div class="article-footer">
+            <span class="article-linkedin-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              Read on LinkedIn
+            </span>
+            <span>&rarr;</span>
+          </div>
+        </a>
+
+        <!-- Article 3 -->
+        <a href="https://www.linkedin.com/in/kakulsarma/" target="_blank" rel="noopener noreferrer" class="article-card" id="article-accessibility">
+          <div class="article-meta-top">
+            <span class="article-tag">Accessibility &amp; Web Standards</span>
+            <span class="article-read-time">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              5 min read
+            </span>
+          </div>
+          <h3 class="article-title">Section 508 Compliance &amp; High-Performance Rendering in Large-Scale SPAs</h3>
+          <p class="article-snippet">Ensuring inclusive design and full Section 508 legal compliance without sacrificing rendering velocity. Architectural patterns for ARIA live regions, keyboard navigation flows, and automated contrast verification.</p>
+          <div class="article-footer">
+            <span class="article-linkedin-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              Read on LinkedIn
+            </span>
+            <span>&rarr;</span>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- LinkedIn Pulse Articles CTA Banner -->
+      <div class="articles-cta-banner">
+        <div class="articles-cta-text">
+          <h4>Read All Insights &amp; Updates on LinkedIn</h4>
+          <p>Follow Kakul Sarma on LinkedIn for continuous thoughts on full-stack architecture, GenAI, and enterprise software engineering.</p>
+        </div>
+        <a href="https://www.linkedin.com/in/kakulsarma/" target="_blank" rel="noopener noreferrer" class="btn-primary" id="btn-linkedin-pulse">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+          <span>Follow @kakulsarma on LinkedIn</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
     </div>
   </section>
 
@@ -372,7 +562,7 @@
       <div class="section-header">
         <span class="section-badge">Career Trajectory</span>
         <h2 class="section-title">Professional <span class="gradient-text">Experience</span></h2>
-        <p class="section-desc">8+ years of technical leadership, enterprise consulting, and scalable web engineering.</p>
+        <p class="section-desc"><span id="exp-total-years-summary">8+ Years</span> of technical leadership, enterprise consulting, and scalable web engineering.</p>
       </div>
 
       <div class="timeline-wrapper">
@@ -393,10 +583,10 @@
               <li>Collaborate deeply with cross-functional engineering leads to drive rapid adoption of modern JavaScript standards, optimize distributed infrastructure overheads, and integrate scalable cloud/AI solutions.</li>
             </ul>
             <div class="timeline-tags">
-              <span class="tech-tag">Next.js Full-Stack</span>
-              <span class="tech-tag">Micro-Frontends</span>
-              <span class="tech-tag">Module Federation</span>
-              <span class="tech-tag">Cloud &amp; AI Integration</span>
+              <span class="tech-tag"><i class="devicon-nextjs-plain"></i> Next.js Full-Stack</span>
+              <span class="tech-tag"><i class="devicon-python-plain colored"></i> Python</span>
+              <span class="tech-tag"><i class="devicon-webpack-plain colored"></i> Module Federation</span>
+              <span class="tech-tag"><i class="devicon-amazonwebservices-plain-wordmark colored"></i> Cloud &amp; AI</span>
               <span class="tech-tag">IBM</span>
             </div>
           </div>
@@ -418,10 +608,10 @@
               <li>Architected scalable micro-frontend boundaries using Module Federation, isolating business domains while significantly reducing global rendering latencies and enhancing Section 508 accessibility compliance.</li>
             </ul>
             <div class="timeline-tags">
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">Next.js (SSR)</span>
-              <span class="tech-tag">Angular</span>
-              <span class="tech-tag">Module Federation</span>
+              <span class="tech-tag"><i class="devicon-react-original colored"></i> React</span>
+              <span class="tech-tag"><i class="devicon-nextjs-plain"></i> Next.js (SSR)</span>
+              <span class="tech-tag"><i class="devicon-angularjs-plain colored"></i> Angular</span>
+              <span class="tech-tag"><i class="devicon-typescript-plain colored"></i> TypeScript</span>
               <span class="tech-tag">Section 508</span>
             </div>
           </div>
@@ -443,11 +633,11 @@
               <li>Engineered custom RESTful microservices, state machines, and performant backend data storage patterns.</li>
             </ul>
             <div class="timeline-tags">
-              <span class="tech-tag">MERN Stack</span>
-              <span class="tech-tag">MongoDB</span>
-              <span class="tech-tag">Express</span>
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag"><i class="devicon-react-original colored"></i> MERN Stack</span>
+              <span class="tech-tag"><i class="devicon-mongodb-plain colored"></i> MongoDB</span>
+              <span class="tech-tag"><i class="devicon-express-original"></i> Express</span>
+              <span class="tech-tag"><i class="devicon-react-original colored"></i> React</span>
+              <span class="tech-tag"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
             </div>
           </div>
         </div>
@@ -467,9 +657,9 @@
               Built dynamic client web portals, API middleware, and interactive user interfaces using modern JavaScript frameworks and scalable database backends.
             </p>
             <div class="timeline-tags">
-              <span class="tech-tag">Full-Stack Development</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">REST APIs</span>
+              <span class="tech-tag"><i class="devicon-javascript-plain colored"></i> Full-Stack JS</span>
+              <span class="tech-tag"><i class="devicon-angularjs-plain colored"></i> Angular</span>
+              <span class="tech-tag"><i class="devicon-nodejs-plain colored"></i> REST APIs</span>
             </div>
           </div>
         </div>
@@ -489,9 +679,9 @@
               Engineered crowdfunding web application components, real-time donation processing workflows, and social campaign feeds.
             </p>
             <div class="timeline-tags">
-              <span class="tech-tag">Web Platforms</span>
-              <span class="tech-tag">Fintech Workflows</span>
-              <span class="tech-tag">PHP &amp; JS</span>
+              <span class="tech-tag"><i class="devicon-php-plain colored"></i> PHP</span>
+              <span class="tech-tag"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+              <span class="tech-tag"><i class="devicon-mysql-plain colored"></i> MySQL</span>
             </div>
           </div>
         </div>
@@ -516,34 +706,34 @@
         <!-- Frontend & Arch -->
         <div class="skill-category-card">
           <div class="skill-cat-header">
-            <div class="skill-cat-icon">&#x2728;</div>
+            <div class="skill-cat-icon"><i class="devicon-react-original colored"></i></div>
             <h3 class="skill-cat-title">Frontend &amp; Architecture</h3>
           </div>
           <ul class="skill-list">
             <li class="skill-item">
               <div class="skill-info">
-                <span class="skill-name">Next.js (App Router / SSR)</span>
+                <span class="skill-name"><i class="devicon-nextjs-plain"></i> Next.js (App Router / SSR)</span>
                 <span class="skill-pct">95%</span>
               </div>
               <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 95%;"></div></div>
             </li>
             <li class="skill-item">
               <div class="skill-info">
-                <span class="skill-name">React / Redux / TypeScript</span>
+                <span class="skill-name"><i class="devicon-react-original colored"></i> React / <i class="devicon-redux-original colored"></i> Redux / <i class="devicon-typescript-plain colored"></i> TypeScript <span class="skill-tenure-badge" id="skill-tenure-react"></span></span>
                 <span class="skill-pct">95%</span>
               </div>
               <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 95%;"></div></div>
             </li>
             <li class="skill-item">
               <div class="skill-info">
-                <span class="skill-name">Micro-Frontends / Module Federation</span>
+                <span class="skill-name"><i class="devicon-webpack-plain colored"></i> Micro-Frontends / Module Federation</span>
                 <span class="skill-pct">92%</span>
               </div>
               <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
             </li>
             <li class="skill-item">
               <div class="skill-info">
-                <span class="skill-name">Angular 2+ / HTML5 / CSS3 / SCSS</span>
+                <span class="skill-name"><i class="devicon-angularjs-plain colored"></i> Angular 2+ / <i class="devicon-html5-plain colored"></i> HTML5 / <i class="devicon-sass-original colored"></i> SCSS <span class="skill-tenure-badge" id="skill-tenure-angular"></span></span>
                 <span class="skill-pct">90%</span>
               </div>
               <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
@@ -554,37 +744,37 @@
         <!-- AI & Backend -->
         <div class="skill-category-card">
           <div class="skill-cat-header">
-            <div class="skill-cat-icon">&#x1F9E0;</div>
+            <div class="skill-cat-icon"><i class="devicon-python-plain colored"></i></div>
             <h3 class="skill-cat-title">AI &amp; Data Stack</h3>
           </div>
           <ul class="skill-list">
             <li class="skill-item">
               <div class="skill-info">
-                <span class="skill-name">LLM Integration (watsonx.ai, OpenAI)</span>
+                <span class="skill-name"><i class="devicon-python-plain colored"></i> LLM &amp; GenAI (watsonx.ai, OpenAI) <span class="skill-tenure-badge" id="skill-tenure-ai"></span></span>
                 <span class="skill-pct">92%</span>
               </div>
               <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
             </li>
             <li class="skill-item">
               <div class="skill-info">
-                <span class="skill-name">RAG Architectures &amp; Vector Embeddings</span>
-                <span class="skill-pct">88%</span>
-              </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div>
-            </li>
-            <li class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name">Prompt Engineering &amp; Middleware</span>
+                <span class="skill-name"><i class="devicon-fastapi-plain colored"></i> MCP Server &amp; Custom Tool Calling</span>
                 <span class="skill-pct">90%</span>
               </div>
               <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
             </li>
             <li class="skill-item">
               <div class="skill-info">
-                <span class="skill-name">Intelligent Agent Orchestration</span>
+                <span class="skill-name"><i class="devicon-postgresql-plain colored"></i> RAG Architectures &amp; Vector Embeddings</span>
                 <span class="skill-pct">88%</span>
               </div>
               <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="devicon-jupyter-plain colored"></i> Prompt Engineering &amp; Agent Loops</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
             </li>
           </ul>
         </div>
@@ -592,37 +782,75 @@
         <!-- Backend, Cloud & Specs -->
         <div class="skill-category-card">
           <div class="skill-cat-header">
-            <div class="skill-cat-icon">&#x2601;&#xFE0F;</div>
+            <div class="skill-cat-icon"><i class="devicon-nodejs-plain colored"></i></div>
             <h3 class="skill-cat-title">Backend, Cloud &amp; Specs</h3>
           </div>
           <ul class="skill-list">
             <li class="skill-item">
               <div class="skill-info">
-                <span class="skill-name">Node.js / Express / RESTful APIs</span>
+                <span class="skill-name"><i class="devicon-python-plain colored"></i> Python (FastAPI, Scripting, AI Services) <span class="skill-tenure-badge" id="skill-tenure-python"></span></span>
+                <span class="skill-pct">92%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="devicon-nodejs-plain colored"></i> Node.js / <i class="devicon-express-original"></i> Express / RESTful APIs <span class="skill-tenure-badge" id="skill-tenure-nodejs"></span></span>
                 <span class="skill-pct">94%</span>
               </div>
               <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 94%;"></div></div>
             </li>
             <li class="skill-item">
               <div class="skill-info">
-                <span class="skill-name">MongoDB / MySQL / Firebase</span>
+                <span class="skill-name"><i class="devicon-mongodb-plain colored"></i> MongoDB / <i class="devicon-mysql-plain colored"></i> MySQL / <i class="devicon-firebase-plain colored"></i> Firebase</span>
                 <span class="skill-pct">88%</span>
               </div>
               <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div>
             </li>
             <li class="skill-item">
               <div class="skill-info">
-                <span class="skill-name">AWS (Serverless), GCP, Git, CI/CD</span>
+                <span class="skill-name"><i class="devicon-amazonwebservices-plain-wordmark colored"></i> AWS / <i class="devicon-googlecloud-plain colored"></i> GCP / <i class="devicon-git-plain colored"></i> Git</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- AI Cybersecurity & Governance Card -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">&#x1F6E1;&#xFE0F;</div>
+            <h3 class="skill-cat-title">AI Cybersecurity &amp; Governance</h3>
+          </div>
+          <ul class="skill-list">
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="devicon-bash-plain colored"></i> OWASP Top 10 for LLMs / GenAI</span>
+                <span class="skill-pct">92%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="devicon-linux-plain"></i> NIST AI RMF &amp; Risk Governance</span>
                 <span class="skill-pct">90%</span>
               </div>
               <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
             </li>
             <li class="skill-item">
               <div class="skill-info">
-                <span class="skill-name">Section 508 Accessibility, Ionic 4</span>
-                <span class="skill-pct">92%</span>
+                <span class="skill-name"><i class="devicon-ssh-original"></i> Prompt Injection &amp; Jailbreak Defense</span>
+                <span class="skill-pct">94%</span>
               </div>
-              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 94%;"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="devicon-docker-plain colored"></i> Agent Tool Sandboxing &amp; Guardrails</span>
+                <span class="skill-pct">88%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div>
             </li>
           </ul>
         </div>
@@ -666,8 +894,8 @@
           <h3 class="project-title">angular-js-mvc</h3>
           <p class="project-desc">A structured Model-View-Controller pattern architectural engine for single-page web applications. Engineered for modular code organization and state management.</p>
           <div class="project-tags">
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">AngularJS</span>
+            <span class="tech-tag"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+            <span class="tech-tag"><i class="devicon-angularjs-plain colored"></i> AngularJS</span>
             <span class="tech-tag">MVC Architecture</span>
             <span class="tech-tag">SPA</span>
           </div>
@@ -688,7 +916,7 @@
           <h3 class="project-title">joomla_frankly_tools</h3>
           <p class="project-desc">Frankly ME embedded video and interactive streaming widget integration for responsive rendering and social video Q&amp;A loops.</p>
           <div class="project-tags">
-            <span class="tech-tag">PHP</span>
+            <span class="tech-tag"><i class="devicon-php-plain colored"></i> PHP</span>
             <span class="tech-tag">Joomla</span>
             <span class="tech-tag">Media Widgets</span>
           </div>
@@ -709,7 +937,7 @@
           <h3 class="project-title">joomla_video_comment</h3>
           <p class="project-desc">Interactive video feedback and commentary system allowing user-generated video replies and multimedia moderation hooks.</p>
           <div class="project-tags">
-            <span class="tech-tag">PHP</span>
+            <span class="tech-tag"><i class="devicon-php-plain colored"></i> PHP</span>
             <span class="tech-tag">Interactive Media</span>
             <span class="tech-tag">Joomla</span>
           </div>
@@ -730,8 +958,8 @@
           <h3 class="project-title">drupal_video_tools</h3>
           <p class="project-desc">Enterprise video streaming and metadata management module for Drupal architectures with secure playback endpoints.</p>
           <div class="project-tags">
-            <span class="tech-tag">Drupal</span>
-            <span class="tech-tag">PHP</span>
+            <span class="tech-tag"><i class="devicon-drupal-plain colored"></i> Drupal</span>
+            <span class="tech-tag"><i class="devicon-php-plain colored"></i> PHP</span>
             <span class="tech-tag">Streaming</span>
           </div>
         </article>
@@ -751,9 +979,9 @@
           <h3 class="project-title">wordpress_videopress</h3>
           <p class="project-desc">High-performance video publishing extension providing hardware-accelerated video rendering and customizable playlists.</p>
           <div class="project-tags">
-            <span class="tech-tag">WordPress</span>
+            <span class="tech-tag"><i class="devicon-wordpress-plain colored"></i> WordPress</span>
+            <span class="tech-tag"><i class="devicon-php-plain colored"></i> PHP</span>
             <span class="tech-tag">VideoPress</span>
-            <span class="tech-tag">Open Source</span>
           </div>
         </article>
 
@@ -772,8 +1000,8 @@
           <h3 class="project-title">wordpress_team</h3>
           <p class="project-desc">Modular team showcase directory system for collaborative organizations with animated bio cards and social feeds.</p>
           <div class="project-tags">
-            <span class="tech-tag">PHP</span>
-            <span class="tech-tag">WordPress Plugin</span>
+            <span class="tech-tag"><i class="devicon-wordpress-plain colored"></i> WordPress</span>
+            <span class="tech-tag"><i class="devicon-php-plain colored"></i> PHP</span>
             <span class="tech-tag">Directory</span>
           </div>
         </article>
@@ -839,7 +1067,10 @@
           <div class="terminal-quick-cmds">
             <button class="cmd-chip" data-cmd="bio">bio</button>
             <button class="cmd-chip" data-cmd="experience">experience</button>
+            <button class="cmd-chip" data-cmd="relexp">#relexp</button>
             <button class="cmd-chip" data-cmd="ai">ai</button>
+            <button class="cmd-chip" data-cmd="security">security</button>
+            <button class="cmd-chip" data-cmd="articles">articles</button>
             <button class="cmd-chip" data-cmd="badges">badges</button>
             <button class="cmd-chip" data-cmd="skills">skills</button>
             <button class="cmd-chip" data-cmd="education">education</button>
