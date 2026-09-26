@@ -1662,6 +1662,84 @@ section {
   margin-bottom: 0.75rem;
 }
 
+.timeline-role-group {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+  flex: 1 1 320px;
+}
+
+.company-logo-avatar {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.96);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.company-logo-avatar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.company-logo-avatar:hover {
+  transform: translateY(-2px) scale(1.05);
+}
+
+.company-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Company specific accent borders & glows */
+.company-logo-avatar.logo-ibm {
+  border-color: rgba(15, 98, 254, 0.35);
+}
+.company-logo-avatar.logo-ibm:hover {
+  box-shadow: 0 6px 20px rgba(15, 98, 254, 0.35);
+  border-color: #0f62fe;
+}
+
+.company-logo-avatar.logo-glowderma {
+  border-color: rgba(16, 185, 129, 0.35);
+}
+.company-logo-avatar.logo-glowderma:hover {
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
+  border-color: #10b981;
+}
+
+.company-logo-avatar.logo-t9l {
+  border-color: rgba(255, 210, 49, 0.45);
+}
+.company-logo-avatar.logo-t9l:hover {
+  box-shadow: 0 6px 20px rgba(255, 210, 49, 0.4);
+  border-color: #ffd231;
+}
+
+.company-logo-avatar.logo-bitgiving {
+  border-color: rgba(249, 115, 22, 0.4);
+}
+.company-logo-avatar.logo-bitgiving:hover {
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.35);
+  border-color: #f97316;
+}
+
 .timeline-role {
   font-family: var(--font-heading);
   font-size: 1.25rem;
@@ -2085,11 +2163,29 @@ section {
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  .timeline-role-group {
+    gap: 0.85rem;
+  }
+
+  .company-logo-avatar {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    padding: 6px;
+  }
 }
 
 @media (max-width: 480px) {
   .logo-tag {
     display: none;
+  }
+
+  .company-logo-avatar {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    padding: 5px;
   }
 
   .floating-pill {
