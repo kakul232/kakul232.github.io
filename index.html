@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kakul Sarma | Senior Full-Stack Engineer &amp; Application Consultant</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Official personal domain and portfolio of Kakul Sarma — Senior Full-Stack Engineer & Application Consultant at IBM India. 8+ years experience in Next.js, Micro-Frontends, watsonx.ai, and enterprise web architecture.">
+  <meta name="keywords" content="Kakul Sarma, kakul232, Senior Full-Stack Engineer, Application Consultant, IBM, watsonx.ai, Next.js, React, Angular, Micro-Frontend, Module Federation, Credly, Assam">
+  <meta name="author" content="Kakul Sarma">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kakul Sarma | Senior Full-Stack Engineer &amp; Application Consultant">
+  <meta property="og:description" content="8+ years architecting scalable enterprise systems, Next.js micro-frontends, watsonx.ai LLM integrations, and open-source ecosystems.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kakul232.github.io/">
+  <meta property="og:image" content="assets/images/profile.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Interactive Constellation Canvas -->
+  <canvas id="canvas-bg"></canvas>
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+
+  <!-- ==========================================================================
+       SITE HEADER / NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="#" class="logo-brand" id="brand-logo" aria-label="Kakul Sarma Home">
+        <div class="logo-icon">KS</div>
+        <span>Kakul Sarma</span>
+        <span class="logo-tag">IBM Consultant</span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#about" class="nav-link" id="nav-about">About</a></li>
+          <li><a href="#badges" class="nav-link" id="nav-badges">Badges</a></li>
+          <li><a href="#ai-stack" class="nav-link" id="nav-ai-stack">AI Stack</a></li>
+          <li><a href="#experience" class="nav-link" id="nav-experience">Experience</a></li>
+          <li><a href="#skills" class="nav-link" id="nav-skills">Competencies</a></li>
+          <li><a href="#projects" class="nav-link" id="nav-projects">Projects</a></li>
+          <li><a href="#terminal" class="nav-link" id="nav-terminal">CLI Console</a></li>
+          <li><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions (Theme & CTA) -->
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle" title="Switch Theme (Neon / Aurora / Cyberpunk)" aria-label="Toggle Color Theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <a href="#contact" class="btn-nav-hire" id="btn-quick-connect">
+          <span>Get in Touch</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          &#9776;
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section class="hero-section" id="about">
+    <div class="container hero-grid">
+      <div class="hero-text-content">
+        <div class="status-badge-group">
+          <div class="status-badge" id="hero-status">
+            <span class="status-pulse"></span>
+            <span>8+ Years Enterprise Experience</span>
+          </div>
+          <div class="ibm-badge-hero">
+            <span>IBM India &bull; Application Consultant</span>
+          </div>
+        </div>
+
+        <h1 class="hero-title">
+          Architecting <span class="gradient-text">Enterprise Web Systems</span> &amp; Modern AI Integrations.
+        </h1>
+
+        <div class="hero-role-wrapper">
+          <span>Specializing in</span>
+          <span class="typed-role" id="typed-text"></span>
+        </div>
+
+        <p class="hero-desc">
+          Dynamic and results-driven <strong>Senior Full-Stack Engineer and Application Consultant</strong> with extensive background across modern JavaScript ecosystems (Next.js SSR/App Router, React, Angular 2+), distributed Micro-Frontend architectures (Module Federation), and intelligent GenAI/LLM middleware at IBM.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#experience" class="btn-primary" id="hero-view-experience">
+            <span>View Experience</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+
+          <a href="#badges" class="btn-secondary" id="hero-view-badges">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+            <span>Verified Credly Badges</span>
+          </a>
+
+          <a href="https://linkedin.com/in/kakulsarma" target="_blank" rel="noopener noreferrer" class="btn-secondary" id="hero-linkedin-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+
+        <!-- Quick Stats Row -->
+        <div class="hero-stats-row">
+          <div class="stat-item">
+            <span class="stat-num gradient-text">8+ Yrs</span>
+            <span class="stat-label">Full-Stack Engineering</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">IBM</span>
+            <span class="stat-label">Consultant &amp; Dev</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">8+ Badges</span>
+            <span class="stat-label">Credly Verified</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">Next.js &amp; GenAI</span>
+            <span class="stat-label">Core Architecture</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual / Real Avatar Profile Card -->
+      <div class="hero-visual">
+        <div class="avatar-wrapper">
+          <div class="avatar-glow"></div>
+          <div class="avatar-card">
+            <img src="assets/images/profile.jpg" alt="Kakul Sarma - Senior Full-Stack Engineer and Application Consultant at IBM" class="avatar-img" id="hero-avatar-img">
+            <div class="avatar-gradient-overlay">
+              <span class="avatar-meta-name">Kakul Sarma</span>
+              <span class="avatar-meta-company">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                Application Consultant @ IBM &bull; Noida, UP
+              </span>
+            </div>
+          </div>
+
+          <!-- Floating Badges -->
+          <div class="floating-pill pill-1">
+            <span style="color:#00f2fe;">&lt;/&gt;</span> Next.js &amp; Micro-Frontends
+          </div>
+          <div class="floating-pill pill-2">
+            <span style="color:#0f62fe;">&#x2714;</span> IBM watsonx.ai Certified
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       VERIFIED PROFESSIONAL BADGES (CREDLY / IBM)
+       ========================================================================== -->
+  <section id="badges">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Verified Credentials</span>
+        <h2 class="section-title">Verified <span class="gradient-text">IBM &amp; Credly Badges</span></h2>
+        <p class="section-desc">Officially certified industry badges validating architectural mastery, Generative AI engineering, cloud full-stack development, and enterprise design thinking.</p>
+      </div>
+
+      <div class="badges-grid">
+        
+        <!-- Badge 1 -->
+        <div class="badge-card">
+          <div class="badge-icon-wrap">&#x2601;&#xFE0F;</div>
+          <h3 class="badge-title">Application Consultant - Cloud Full Stack</h3>
+          <div class="badge-issuer">
+            <span>Issued by <strong class="issuer-name">IBM</strong></span>
+            <span class="credly-verify-tag">&#x2713; Verified</span>
+          </div>
+        </div>
+
+        <!-- Badge 2 -->
+        <div class="badge-card">
+          <div class="badge-icon-wrap">&#x1F9E0;</div>
+          <h3 class="badge-title">IBM watsonx Essentials</h3>
+          <div class="badge-issuer">
+            <span>Issued by <strong class="issuer-name">IBM</strong></span>
+            <span class="credly-verify-tag">&#x2713; Verified</span>
+          </div>
+        </div>
+
+        <!-- Badge 3 -->
+        <div class="badge-card">
+          <div class="badge-icon-wrap">&#x26A1;</div>
+          <h3 class="badge-title">Generative AI Engineering Foundations</h3>
+          <div class="badge-issuer">
+            <span>Issued by <strong class="issuer-name">IBM</strong></span>
+            <span class="credly-verify-tag">&#x2713; Verified</span>
+          </div>
+        </div>
+
+        <!-- Badge 4 -->
+        <div class="badge-card">
+          <div class="badge-icon-wrap">&#x1F527;</div>
+          <h3 class="badge-title">JavaScript Application Developer Architect</h3>
+          <div class="badge-issuer">
+            <span>Issued by <strong class="issuer-name">IBM / Credly</strong></span>
+            <span class="credly-verify-tag">&#x2713; Verified</span>
+          </div>
+        </div>
+
+        <!-- Badge 5 -->
+        <div class="badge-card">
+          <div class="badge-icon-wrap">&#x1F916;</div>
+          <h3 class="badge-title">Artificial Intelligence Foundations</h3>
+          <div class="badge-issuer">
+            <span>Issued by <strong class="issuer-name">IBM</strong></span>
+            <span class="credly-verify-tag">&#x2713; Verified</span>
+          </div>
+        </div>
+
+        <!-- Badge 6 -->
+        <div class="badge-card">
+          <div class="badge-icon-wrap">&#x1F50D;</div>
+          <h3 class="badge-title">IBM watsonx.ai Deep Dive</h3>
+          <div class="badge-issuer">
+            <span>Issued by <strong class="issuer-name">IBM / Credly</strong></span>
+            <span class="credly-verify-tag">&#x2713; Verified</span>
+          </div>
+        </div>
+
+        <!-- Badge 7 -->
+        <div class="badge-card">
+          <div class="badge-icon-wrap">&#x1F4A1;</div>
+          <h3 class="badge-title">Enterprise Design Thinking Practitioner</h3>
+          <div class="badge-issuer">
+            <span>Issued by <strong class="issuer-name">IBM</strong></span>
+            <span class="credly-verify-tag">&#x2713; Verified</span>
+          </div>
+        </div>
+
+        <!-- Badge 8 -->
+        <div class="badge-card">
+          <div class="badge-icon-wrap">&#x1F3C6;</div>
+          <h3 class="badge-title">IBM Agile Explorer</h3>
+          <div class="badge-issuer">
+            <span>Issued by <strong class="issuer-name">IBM</strong></span>
+            <span class="credly-verify-tag">&#x2713; Verified</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="badges-footer-cta">
+        <a href="https://www.credly.com/users/kakul-sarma.a09a1b12" target="_blank" rel="noopener noreferrer" class="btn-primary" id="btn-view-credly">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+          </svg>
+          <span>View All 8+ Verified Badges on Credly</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       AI & ENTERPRISE ARCHITECTURE SHOWCASE
+       ========================================================================== -->
+  <section id="ai-stack">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Modern Capabilities</span>
+        <h2 class="section-title">Generative AI &amp; <span class="gradient-text">Enterprise Architecture</span></h2>
+        <p class="section-desc">Proven expertise bridging cutting-edge LLMs and scalable enterprise architectures for high-velocity engineering squads.</p>
+      </div>
+
+      <div class="ai-showcase-grid">
+        
+        <!-- AI Card 1 -->
+        <div class="ai-card">
+          <div class="ai-card-icon">&#x1F9E0;</div>
+          <h3>GenAI &amp; watsonx.ai Integration</h3>
+          <p>Orchestrating intelligent agent microservices, prompt engineering, vector embeddings, and RAG architectures integrated seamlessly with business systems.</p>
+          <ul class="ai-feature-list">
+            <li><span class="dot"></span> watsonx.ai &amp; OpenAI API orchestration</li>
+            <li><span class="dot"></span> Retrieval-Augmented Generation (RAG)</li>
+            <li><span class="dot"></span> Vector Embeddings &amp; Semantic Search</li>
+            <li><span class="dot"></span> Intelligent Middleware Pipelines</li>
+          </ul>
+        </div>
+
+        <!-- AI Card 2 -->
+        <div class="ai-card">
+          <div class="ai-card-icon">&#x2699;&#xFE0F;</div>
+          <h3>Micro-Frontend Architecture</h3>
+          <p>Designing domain-driven micro-frontend boundaries with Webpack Module Federation, isolating business units while slashing global rendering overhead.</p>
+          <ul class="ai-feature-list">
+            <li><span class="dot"></span> Module Federation across decoupled apps</li>
+            <li><span class="dot"></span> Next.js App Router &amp; SSR rendering pathways</li>
+            <li><span class="dot"></span> Shared design tokens &amp; component governance</li>
+            <li><span class="dot"></span> Distributed client-side rendering optimization</li>
+          </ul>
+        </div>
+
+        <!-- AI Card 3 -->
+        <div class="ai-card">
+          <div class="ai-card-icon">&#x1F6E1;&#xFE0F;</div>
+          <h3>Enterprise Compliance &amp; Standards</h3>
+          <p>Enforcing rigorous software standards, Section 508 accessibility compliance, secure RESTful APIs, and automated CI/CD deployment pipelines.</p>
+          <ul class="ai-feature-list">
+            <li><span class="dot"></span> Section 508 Accessibility Compliance</li>
+            <li><span class="dot"></span> Automated GitHub Actions CI/CD</li>
+            <li><span class="dot"></span> Enterprise Design Thinking methodologies</li>
+            <li><span class="dot"></span> High-velocity Agile leadership</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROFESSIONAL EXPERIENCE TIMELINE
+       ========================================================================== -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Career Trajectory</span>
+        <h2 class="section-title">Professional <span class="gradient-text">Experience</span></h2>
+        <p class="section-desc">8+ years of technical leadership, enterprise consulting, and scalable web engineering.</p>
+      </div>
+
+      <div class="timeline-wrapper">
+        
+        <!-- Experience 1: Application Consultant @ IBM -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Application Consultant (JavaScript Full-Stack)</h3>
+                <span class="timeline-org">IBM India Pvt Ltd</span> &bull; <span class="timeline-location">Noida, UP</span>
+              </div>
+              <span class="timeline-period">Oct 2024 – Present</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Serve as a senior technical consultant architecting and delivering high-performance, enterprise web systems built with Next.js full-stack architectures and distributed micro-frontends.</li>
+              <li>Collaborate deeply with cross-functional engineering leads to drive rapid adoption of modern JavaScript standards, optimize distributed infrastructure overheads, and integrate scalable cloud/AI solutions.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tech-tag">Next.js Full-Stack</span>
+              <span class="tech-tag">Micro-Frontends</span>
+              <span class="tech-tag">Module Federation</span>
+              <span class="tech-tag">Cloud &amp; AI Integration</span>
+              <span class="tech-tag">IBM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 2: Application Developer @ IBM -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Application Developer (JavaScript Frontend)</h3>
+                <span class="timeline-org">IBM India Pvt Ltd</span> &bull; <span class="timeline-location">Noida, UP</span>
+              </div>
+              <span class="timeline-period">June 2021 – Oct 2024</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Designed, developed, and maintained robust responsive frontend interfaces utilizing Next.js server-side rendering (SSR), React, and Angular platforms.</li>
+              <li>Architected scalable micro-frontend boundaries using Module Federation, isolating business domains while significantly reducing global rendering latencies and enhancing Section 508 accessibility compliance.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Next.js (SSR)</span>
+              <span class="tech-tag">Angular</span>
+              <span class="tech-tag">Module Federation</span>
+              <span class="tech-tag">Section 508</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 3: Glowderma -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Software Engineer</h3>
+                <span class="timeline-org">Glowderma Pvt Ltd</span> &bull; <span class="timeline-location">Mumbai, MH</span>
+              </div>
+              <span class="timeline-period">May 2020 – May 2021</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Engineered and scaled end-to-end web architectures leveraging the MERN (MongoDB, Express, React, Node.js) development ecosystem.</li>
+              <li>Engineered custom RESTful microservices, state machines, and performant backend data storage patterns.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tech-tag">MERN Stack</span>
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">Express</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 4: T9L -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Software Engineer</h3>
+                <span class="timeline-org">T9L</span> &bull; <span class="timeline-location">Delhi</span>
+              </div>
+              <span class="timeline-period">Sep 2018 – May 2020</span>
+            </div>
+            <p class="timeline-desc">
+              Built dynamic client web portals, API middleware, and interactive user interfaces using modern JavaScript frameworks and scalable database backends.
+            </p>
+            <div class="timeline-tags">
+              <span class="tech-tag">Full-Stack Development</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">REST APIs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 5: BitGiving -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Software Engineer</h3>
+                <span class="timeline-org">BitGiving</span> &bull; <span class="timeline-location">Delhi</span>
+              </div>
+              <span class="timeline-period">Jan 2016 – Aug 2018</span>
+            </div>
+            <p class="timeline-desc">
+              Engineered crowdfunding web application components, real-time donation processing workflows, and social campaign feeds.
+            </p>
+            <div class="timeline-tags">
+              <span class="tech-tag">Web Platforms</span>
+              <span class="tech-tag">Fintech Workflows</span>
+              <span class="tech-tag">PHP &amp; JS</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CORE COMPETENCIES MATRIX
+       ========================================================================== -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Skill Spectrum</span>
+        <h2 class="section-title">Core Competencies &amp; <span class="gradient-text">Tech Stack</span></h2>
+        <p class="section-desc">Comprehensive matrix directly aligned with enterprise delivery, modern cloud, and AI engineering.</p>
+      </div>
+
+      <div class="skills-grid">
+        
+        <!-- Frontend & Arch -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">&#x2728;</div>
+            <h3 class="skill-cat-title">Frontend &amp; Architecture</h3>
+          </div>
+          <ul class="skill-list">
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Next.js (App Router / SSR)</span>
+                <span class="skill-pct">95%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 95%;"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">React / Redux / TypeScript</span>
+                <span class="skill-pct">95%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 95%;"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Micro-Frontends / Module Federation</span>
+                <span class="skill-pct">92%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Angular 2+ / HTML5 / CSS3 / SCSS</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- AI & Backend -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">&#x1F9E0;</div>
+            <h3 class="skill-cat-title">AI &amp; Data Stack</h3>
+          </div>
+          <ul class="skill-list">
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">LLM Integration (watsonx.ai, OpenAI)</span>
+                <span class="skill-pct">92%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">RAG Architectures &amp; Vector Embeddings</span>
+                <span class="skill-pct">88%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Prompt Engineering &amp; Middleware</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Intelligent Agent Orchestration</span>
+                <span class="skill-pct">88%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Backend, Cloud & Specs -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">&#x2601;&#xFE0F;</div>
+            <h3 class="skill-cat-title">Backend, Cloud &amp; Specs</h3>
+          </div>
+          <ul class="skill-list">
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Node.js / Express / RESTful APIs</span>
+                <span class="skill-pct">94%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 94%;"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">MongoDB / MySQL / Firebase</span>
+                <span class="skill-pct">88%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">AWS (Serverless), GCP, Git, CI/CD</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Section 508 Accessibility, Ionic 4</span>
+                <span class="skill-pct">92%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FEATURED PROJECTS & OPEN SOURCE REPOSITORIES
+       ========================================================================== -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Crafted Code &amp; Repos</span>
+        <h2 class="section-title">Open Source &amp; <span class="gradient-text">Architectural Works</span></h2>
+        <p class="section-desc">Public open-source modules, single-page application patterns, and video toolkits authored on GitHub.</p>
+      </div>
+
+      <div class="projects-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="web">Web Architecture</button>
+        <button class="filter-btn" data-filter="video">Video &amp; Media Tools</button>
+        <button class="filter-btn" data-filter="cms">CMS &amp; Plugins</button>
+      </div>
+
+      <div class="projects-grid" id="projects-container">
+        
+        <!-- Project 1: angular-js-mvc -->
+        <article class="project-card" data-category="web">
+          <div class="project-card-top">
+            <div class="project-folder-icon">&#x1F4BB;</div>
+            <div class="project-links">
+              <a href="https://github.com/kakul232/angular-js-mvc" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="View Source on GitHub" aria-label="View angular-js-mvc on GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">angular-js-mvc</h3>
+          <p class="project-desc">A structured Model-View-Controller pattern architectural engine for single-page web applications. Engineered for modular code organization and state management.</p>
+          <div class="project-tags">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">AngularJS</span>
+            <span class="tech-tag">MVC Architecture</span>
+            <span class="tech-tag">SPA</span>
+          </div>
+        </article>
+
+        <!-- Project 2: joomla_frankly_tools -->
+        <article class="project-card" data-category="video cms">
+          <div class="project-card-top">
+            <div class="project-folder-icon">&#x1F3AC;</div>
+            <div class="project-links">
+              <a href="https://github.com/kakul232/joomla_frankly_tools" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="View Source on GitHub" aria-label="View joomla_frankly_tools on GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">joomla_frankly_tools</h3>
+          <p class="project-desc">Frankly ME embedded video and interactive streaming widget integration for responsive rendering and social video Q&amp;A loops.</p>
+          <div class="project-tags">
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">Joomla</span>
+            <span class="tech-tag">Media Widgets</span>
+          </div>
+        </article>
+
+        <!-- Project 3: joomla_video_comment -->
+        <article class="project-card" data-category="video cms">
+          <div class="project-card-top">
+            <div class="project-folder-icon">&#x1F4E2;</div>
+            <div class="project-links">
+              <a href="https://github.com/kakul232/joomla_video_comment" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="View Source on GitHub" aria-label="View joomla_video_comment on GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">joomla_video_comment</h3>
+          <p class="project-desc">Interactive video feedback and commentary system allowing user-generated video replies and multimedia moderation hooks.</p>
+          <div class="project-tags">
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">Interactive Media</span>
+            <span class="tech-tag">Joomla</span>
+          </div>
+        </article>
+
+        <!-- Project 4: drupal_video_tools -->
+        <article class="project-card" data-category="video cms">
+          <div class="project-card-top">
+            <div class="project-folder-icon">&#x1F527;</div>
+            <div class="project-links">
+              <a href="https://github.com/kakul232/drupal_video_tools" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="View Source on GitHub" aria-label="View drupal_video_tools on GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">drupal_video_tools</h3>
+          <p class="project-desc">Enterprise video streaming and metadata management module for Drupal architectures with secure playback endpoints.</p>
+          <div class="project-tags">
+            <span class="tech-tag">Drupal</span>
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">Streaming</span>
+          </div>
+        </article>
+
+        <!-- Project 5: wordpress_videopress -->
+        <article class="project-card" data-category="video cms">
+          <div class="project-card-top">
+            <div class="project-folder-icon">&#x1F680;</div>
+            <div class="project-links">
+              <a href="https://github.com/kakul232/wordpress_videopress" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="View Source on GitHub" aria-label="View wordpress_videopress on GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">wordpress_videopress</h3>
+          <p class="project-desc">High-performance video publishing extension providing hardware-accelerated video rendering and customizable playlists.</p>
+          <div class="project-tags">
+            <span class="tech-tag">WordPress</span>
+            <span class="tech-tag">VideoPress</span>
+            <span class="tech-tag">Open Source</span>
+          </div>
+        </article>
+
+        <!-- Project 6: wordpress_team -->
+        <article class="project-card" data-category="cms web">
+          <div class="project-card-top">
+            <div class="project-folder-icon">&#x1F465;</div>
+            <div class="project-links">
+              <a href="https://github.com/kakul232/wordpress_team" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="View Source on GitHub" aria-label="View wordpress_team on GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">wordpress_team</h3>
+          <p class="project-desc">Modular team showcase directory system for collaborative organizations with animated bio cards and social feeds.</p>
+          <div class="project-tags">
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">WordPress Plugin</span>
+            <span class="tech-tag">Directory</span>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- GitHub Live Metrics Banner -->
+      <div class="github-metrics-banner">
+        <div class="github-metrics-info">
+          <img src="assets/images/profile.jpg" alt="kakul232 GitHub Profile" class="github-avatar">
+          <div class="github-user-details">
+            <h4>Kakul Sarma (@kakul232)</h4>
+            <p>Active open source contributions &amp; code repositories on GitHub</p>
+          </div>
+        </div>
+
+        <div class="github-stats-counters">
+          <div class="gh-stat-box">
+            <div class="gh-stat-val" id="gh-repos-count">6+</div>
+            <div class="gh-stat-name">Repositories</div>
+          </div>
+          <div class="gh-stat-box">
+            <div class="gh-stat-val" id="gh-stars-count">15+</div>
+            <div class="gh-stat-name">Total Stars</div>
+          </div>
+          <div class="gh-stat-box">
+            <div class="gh-stat-val" id="gh-followers-count">1+</div>
+            <div class="gh-stat-name">Followers</div>
+          </div>
+        </div>
+
+        <a href="https://github.com/kakul232" target="_blank" rel="noopener noreferrer" class="btn-secondary" id="gh-profile-btn">
+          <span>Visit @kakul232 on GitHub</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INTERACTIVE DEVELOPER TERMINAL / CLI
+       ========================================================================== -->
+  <section id="terminal">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Interactive Shell</span>
+        <h2 class="section-title">Developer <span class="gradient-text">CLI Console</span></h2>
+        <p class="section-desc">Query verified resume milestones, AI stacks, Credly badges, and open source projects right from the terminal.</p>
+      </div>
+
+      <div class="terminal-wrapper" id="cli-console">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="terminal-dot dot-red"></span>
+            <span class="terminal-dot dot-yellow"></span>
+            <span class="terminal-dot dot-green"></span>
+          </div>
+          <span class="terminal-title">kakul232@ibm-consultant ~ zsh</span>
+          <div class="terminal-quick-cmds">
+            <button class="cmd-chip" data-cmd="bio">bio</button>
+            <button class="cmd-chip" data-cmd="experience">experience</button>
+            <button class="cmd-chip" data-cmd="ai">ai</button>
+            <button class="cmd-chip" data-cmd="badges">badges</button>
+            <button class="cmd-chip" data-cmd="skills">skills</button>
+            <button class="cmd-chip" data-cmd="education">education</button>
+            <button class="cmd-chip" data-cmd="contact">contact</button>
+            <button class="cmd-chip" data-cmd="clear">clear</button>
+          </div>
+        </div>
+
+        <div class="terminal-body" id="terminal-body">
+          <div class="term-line">
+            <span class="term-success">Kakul Sarma (kakul232) Portfolio Shell &bull; Verified IBM Application Consultant</span>
+          </div>
+          <div class="term-line">
+            Type <span class="term-highlight">help</span> or click any quick command chip above.
+          </div>
+          <div class="term-input-row">
+            <span class="term-prompt">kakul@terminal:~$</span>
+            <input type="text" id="term-input" class="term-input" autocomplete="off" spellcheck="false" placeholder="Try 'badges', 'experience', 'ai'..." aria-label="Terminal input command">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONTACT SECTION
+       ========================================================================== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Get In Touch</span>
+        <h2 class="section-title">Direct <span class="gradient-text">Contact Channels</span></h2>
+        <p class="section-desc">Open for enterprise consulting, high-impact engineering leadership, and cloud/AI collaborations.</p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Contact Information Cards -->
+        <div class="contact-info-card">
+          
+          <!-- Personal Email -->
+          <a href="mailto:kakulsarma@gmail.com" class="contact-item" id="copy-email-btn" title="Click to copy email">
+            <div class="contact-icon">&#x2709;&#xFE0F;</div>
+            <div class="contact-details">
+              <h5>Personal Email</h5>
+              <p>kakulsarma@gmail.com</p>
+            </div>
+            <span class="copy-badge">Click to Copy</span>
+          </a>
+
+          <!-- IBM Email -->
+          <a href="mailto:Kakul.Sarma@ibm.com" class="contact-item" id="copy-ibm-email-btn" title="Click to copy IBM email">
+            <div class="contact-icon">&#x1F4BC;</div>
+            <div class="contact-details">
+              <h5>IBM Official Email</h5>
+              <p>Kakul.Sarma@ibm.com</p>
+            </div>
+            <span class="copy-badge">Click to Copy</span>
+          </a>
+
+          <!-- Phone -->
+          <a href="tel:+919871229599" class="contact-item" id="contact-phone">
+            <div class="contact-icon">&#x1F4DE;</div>
+            <div class="contact-details">
+              <h5>Phone Number</h5>
+              <p>(+91) 9871229599</p>
+            </div>
+            <span class="copy-badge">Call &rarr;</span>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com/in/kakulsarma" target="_blank" rel="noopener noreferrer" class="contact-item" id="contact-linkedin">
+            <div class="contact-icon">&#x1F517;</div>
+            <div class="contact-details">
+              <h5>LinkedIn Profile</h5>
+              <p>linkedin.com/in/kakulsarma</p>
+            </div>
+            <span class="copy-badge">Connect &rarr;</span>
+          </a>
+
+          <!-- Credly -->
+          <a href="https://www.credly.com/users/kakul-sarma.a09a1b12" target="_blank" rel="noopener noreferrer" class="contact-item" id="contact-credly">
+            <div class="contact-icon">&#x1F3C5;</div>
+            <div class="contact-details">
+              <h5>Credly Verified Badges</h5>
+              <p>credly.com/users/kakul-sarma</p>
+            </div>
+            <span class="copy-badge">Verify &rarr;</span>
+          </a>
+
+          <!-- Location -->
+          <div class="contact-item">
+            <div class="contact-icon">&#x1F30E;</div>
+            <div class="contact-details">
+              <h5>Location</h5>
+              <p>Nalbari, Assam, India - 781306</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Interactive Direct Message Form -->
+        <form class="contact-form" id="portfolio-contact-form">
+          <div id="contact-alert" class="form-alert"></div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-name">Your Full Name</label>
+            <input type="text" id="contact-name" class="form-input" placeholder="e.g. Alex Morgan" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-email">Your Work / Personal Email</label>
+            <input type="email" id="contact-email" class="form-input" placeholder="e.g. alex@company.com" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-message">Consulting Inquiry or Project Scope</label>
+            <textarea id="contact-message" class="form-textarea" placeholder="Detail your enterprise requirements, consulting project, or collaboration..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary" id="btn-submit-message">
+            <span>Send Direct Inquiry</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-copy">
+        &copy; <span id="current-year">2026</span> <strong>Kakul Sarma</strong> &bull; Senior Full-Stack Engineer / Application Consultant. Published on <strong>GitHub Pages</strong>.
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://linkedin.com/in/kakulsarma" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn Profile" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+        <a href="https://github.com/kakul232" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub kakul232" aria-label="Kakul Sarma on GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+        </a>
+        <a href="https://www.credly.com/users/kakul-sarma.a09a1b12" target="_blank" rel="noopener noreferrer" class="social-btn" title="Credly Verified Badges" aria-label="Credly">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+          </svg>
+        </a>
+        <a href="mailto:kakulsarma@gmail.com" class="social-btn" title="Email Kakul Sarma" aria-label="Email Kakul Sarma">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript Controller -->
+  <script src="js/main.js"></script>
+</body>
+</html>
