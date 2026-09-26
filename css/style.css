@@ -1495,7 +1495,7 @@ section {
    ========================================================================== */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 
@@ -1503,7 +1503,7 @@ section {
   background: var(--surface-card);
   border: 1px solid var(--surface-border);
   border-radius: var(--radius-lg);
-  padding: 2.25rem 1.75rem;
+  padding: 2.25rem 2rem;
   transition: all var(--transition-smooth);
 }
 
@@ -1555,15 +1555,44 @@ section {
 .skill-info {
   display: flex;
   justify-content: space-between;
-  font-size: 0.9rem;
-  font-weight: 600;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.45rem;
 }
 
 .skill-name {
   color: var(--text-main);
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.4;
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.35rem;
+  min-width: 0;
+}
+
+.skill-name i {
+  font-size: 1.15rem;
+  vertical-align: -2px;
+  margin-right: 0.2rem;
+  display: inline-block;
+}
+
+.skill-sep {
+  color: var(--text-dim);
+  opacity: 0.45;
+  font-weight: 400;
+  margin: 0 0.22rem;
+  user-select: none;
+}
+
+.skill-metrics {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .skill-tenure-badge {
@@ -1572,17 +1601,28 @@ section {
   font-weight: 700;
   color: var(--accent-cyan);
   background: rgba(0, 242, 254, 0.12);
-  border: 1px solid rgba(0, 242, 254, 0.28);
-  padding: 0.12rem 0.5rem;
+  border: 1px solid rgba(0, 242, 254, 0.32);
+  padding: 0.16rem 0.55rem;
   border-radius: var(--radius-full);
-  margin-left: 0.4rem;
+  white-space: nowrap;
   letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+.skill-tenure-badge:empty {
+  display: none;
 }
 
 .skill-pct {
   color: var(--accent-cyan);
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  min-width: 34px;
+  text-align: right;
 }
 
 .skill-bar-bg {
@@ -2163,6 +2203,11 @@ a.company-logo-avatar {
 
   .playground-box {
     grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
 
