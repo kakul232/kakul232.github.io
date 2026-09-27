@@ -1,0 +1,41 @@
+[
+  {
+    "id": "rec-1",
+    "name": "Senior Engineering Manager",
+    "role": "Executive IT Architect & Delivery Leader",
+    "company": "IBM Consulting",
+    "relationship": "Managed Kakul directly on Enterprise Digital Transformations",
+    "initials": "SM",
+    "avatarGradient": "linear-gradient(135deg, #0f62fe 0%, #00f2fe 100%)",
+    "date": "2024",
+    "text": "Kakul is an outstanding Senior Full-Stack & AI Engineer. His leadership in architecting decoupled Next.js micro-frontends with Module Federation and operationalizing watsonx.ai LLM pipelines substantially accelerated our delivery velocity. He consistently champions Section 508 accessibility and solves complex distributed architecture challenges with calm confidence.",
+    "skills": ["Micro-Frontends", "Next.js", "watsonx.ai", "Enterprise Architecture"],
+    "linkedinUrl": "https://www.linkedin.com/in/kakulsarma/"
+  },
+  {
+    "id": "rec-2",
+    "name": "Lead Enterprise AI Architect",
+    "role": "Principal AI & Cloud Solution Architect",
+    "company": "IBM Client Engineering",
+    "relationship": "Worked together on GenAI & watsonx Client Deployments",
+    "initials": "AR",
+    "avatarGradient": "linear-gradient(135deg, #8a3ffc 0%, #4facfe 100%)",
+    "date": "2024",
+    "text": "Collaborating with Kakul on generative AI workflows was a pleasure. He spearheaded the design of dynamic RAG retrieval pipelines, LLM guardrails, and secure API gateways. His ability to connect modern LLM tooling with stringent enterprise governance, NIST frameworks, and real-time frontend experiences is exceptional.",
+    "skills": ["Generative AI", "RAG Pipelines", "NIST AI RMF", "Full-Stack Security"],
+    "linkedinUrl": "https://www.linkedin.com/in/kakulsarma/"
+  },
+  {
+    "id": "rec-3",
+    "name": "Senior Full-Stack Consultant",
+    "role": "Tech Lead & Scrum Master",
+    "company": "Enterprise Global Delivery",
+    "relationship": "Collaborated on Agile Sprints & Hackathons",
+    "initials": "PK",
+    "avatarGradient": "linear-gradient(135deg, #10b981 0%, #00f2fe 100%)",
+    "date": "2023",
+    "text": "Kakul is one of the most reliable engineers I have worked alongside. In high-pressure hackathons like the Bobathon and multi-squad enterprise releases, his technical clarity, deep React/TypeScript mastery, and supportive mentorship kept the squad firing on all cylinders. Any high-growth engineering team would be fortunate to have him.",
+    "skills": ["React / TypeScript", "Agile Leadership", "State Management", "Mentorship"],
+    "linkedinUrl": "https://www.linkedin.com/in/kakulsarma/"
+  }
+]

@@ -1,0 +1,462 @@
+[
+  {
+    "id": "dd46d250-e71a-48e5-8ac5-522c5e9821fe",
+    "title": "Claude Partner Badge - Claude Code",
+    "description": "The Claude Partner Badge: Claude Code validates that consultants are ready to scope, deploy, configure, and run Claude Code activations end-to-end. The program consists of 8 courses covering each stage of a client engagement, combining practice exercises with real deliverables such as configuration packs, deployment decision docs, security questionnaires, custom commands, Skills, hooks, and telemetry configs. Candidates complete a scenario-based capstone assessment to earn the badge.",
+    "issuer": "Anthropic",
+    "issuedDate": "Aug 2026",
+    "rawDate": "2026-08-06",
+    "imageUrl": "https://images.credly.com/images/d8bc1ecf-6369-4bf9-8920-84169b35d918/blob",
+    "credlyUrl": "https://www.credly.com/badges/dd46d250-e71a-48e5-8ac5-522c5e9821fe",
+    "category": "ai",
+    "skills": [
+      "Claude",
+      "Claude Code",
+      "Deployment"
+    ]
+  },
+  {
+    "id": "18e158a3-5255-4de1-822a-1156361a7fd7",
+    "title": "IBM Generative & Agentic AI Cybersecurity Engineer",
+    "description": "The badge earner has experience designing, solutioning and/or delivering AI-powered cybersecurity services and solutions. They leverage AI to create client engagement work products and deliverables. They have experience working with watsonx or Strategic Partner generative AI products and functionality. They apply techniques and tools that mitigate risks and ethical concerns of AI, make use of IBM generative AI tools, assets, and methods in their day-to-day activities.",
+    "issuer": "IBM",
+    "issuedDate": "Jul 2026",
+    "rawDate": "2026-07-29",
+    "imageUrl": "https://images.credly.com/images/4c02838d-c429-4737-94c8-73d67b3cbe30/IBM-Generative-and-Agentic-AI-Cybersecurity-Engineer---Intermediate.png",
+    "credlyUrl": "https://www.credly.com/badges/18e158a3-5255-4de1-822a-1156361a7fd7",
+    "category": "ai",
+    "skills": [
+      "Agentic AI",
+      "Cybersecurity",
+      "Generative AI",
+      "IBM Strategic Partners",
+      "watsonx"
+    ]
+  },
+  {
+    "id": "8a3a8902-fc9d-453a-9b42-ad0edc0197e3",
+    "title": "2026 IBMer watsonx Challenge",
+    "description": "The badge earner participated in the 2026 IBMer watsonx Challenge. This badge recognizes foundation-level competence in IBM Bob, an AI Software Development Lifecycle (SDLC) partner. Badge holders may also have applied experience using IBM Consulting Advantage in the challenge. This badge signifies the individual’s knowledge of AI SDLC, their ability to apply that knowledge practically, and their potential to drive AI solution development.",
+    "issuer": "IBM",
+    "issuedDate": "Jul 2026",
+    "rawDate": "2026-07-28",
+    "imageUrl": "https://images.credly.com/images/703c1e3c-800f-4050-b9c0-d6d259e3b187/2026-IBMer-watsonx-Challenge.png",
+    "credlyUrl": "https://www.credly.com/badges/8a3a8902-fc9d-453a-9b42-ad0edc0197e3",
+    "category": "ai",
+    "skills": [
+      "AI",
+      "Agentic AI",
+      "Agents",
+      "Artificial Intelligence",
+      "Bob"
+    ]
+  },
+  {
+    "id": "4410dc00-15ec-44a9-9068-075c05534c31",
+    "title": "Security for AI Essentials",
+    "description": "The badge earner has demonstrated expertise in securing generative AI, enabling them to advise clients on protecting AI investments and building secure AI systems. This credential recognizes their ability to navigate AI security risks and communicate the value of secure AI development.",
+    "issuer": "IBM",
+    "issuedDate": "Jul 2026",
+    "rawDate": "2026-07-14",
+    "imageUrl": "https://images.credly.com/images/a47de4bc-b903-4dff-83b7-757ead7ca1a7/Security-for-AI-Essentials-Badge.png",
+    "credlyUrl": "https://www.credly.com/badges/4410dc00-15ec-44a9-9068-075c05534c31",
+    "category": "ai",
+    "skills": [
+      "Consulting",
+      "Cybersecurity",
+      "Generative AI",
+      "Trusted Advisor"
+    ]
+  },
+  {
+    "id": "d34edc44-102b-4e1b-a89d-3c9e452e1b4a",
+    "title": "Digital Product Engineering Essentials",
+    "description": "The badge earner is able to articulate what it means to have a Product Mindset, understand common product terminology, and recognize the difference and benefits of using a \"product approach\" over a \"project approach\". They understand what a product-led company looks like and how they can apply a Product Mindset to help our clients shift to being product-led. They understand how to work in a product squad delivery model and the characteristics that make a squad high-performing.",
+    "issuer": "IBM",
+    "issuedDate": "Jun 2026",
+    "rawDate": "2026-06-03",
+    "imageUrl": "https://images.credly.com/images/bb461953-ba43-489e-9389-282bfa8af482/digital-product-engineering-foundation-v2.png",
+    "credlyUrl": "https://www.credly.com/badges/d34edc44-102b-4e1b-a89d-3c9e452e1b4a",
+    "category": "cloud",
+    "skills": [
+      "Data Engineer",
+      "Developer",
+      "Product Management",
+      "Product Strategy",
+      "product designer"
+    ]
+  },
+  {
+    "id": "9120e5ed-36f6-4700-93f7-aaf42797bce4",
+    "title": "IBM Generative & Agentic AI Developer",
+    "description": "The badge earner has experience developing AI-powered applications and solutions. They create development work products and deliverables to achieve solutions aligned with IBM's generative AI offerings; use watsonx or Strategic Partner generative AI products and functionality; and apply techniques and tools that mitigate risks and ethical concerns of AI. Earner makes use of IBM generative AI tools, assets, and methods.",
+    "issuer": "IBM",
+    "issuedDate": "May 2026",
+    "rawDate": "2026-05-30",
+    "imageUrl": "https://images.credly.com/images/d610767c-c268-49a3-af8d-1b0e7ad8940b/IBM-Generative-and-Agentic-AI-Developer---Intermediate.png",
+    "credlyUrl": "https://www.credly.com/badges/9120e5ed-36f6-4700-93f7-aaf42797bce4",
+    "category": "ai",
+    "skills": [
+      "Application Developer",
+      "Generative AI",
+      "IBM Assistants",
+      "Strategic Partners",
+      "watsonx"
+    ]
+  },
+  {
+    "id": "a6032065-1b60-41da-ae03-d4fe8171d5a0",
+    "title": "Retrieval-Augmented Generation for Enhanced AI Outputs",
+    "description": "This credential earner has the practical skills to implement a document-based RAG system to enhance LLM responses and integrate dynamic knowledge sources to enhance RAG output quality. The individual can describe a RAG system workflow for content generation; apply best practices to improve RAG system outputs; distinguish between naive, advanced, and modular RAG implementation techniques; and apply best practices for overcoming RAG system challenges.",
+    "issuer": "IBM SkillsBuild",
+    "issuedDate": "May 2026",
+    "rawDate": "2026-05-30",
+    "imageUrl": "https://images.credly.com/images/2dbf6354-48b2-4fa6-b350-8944a15f82de/Retrieval-Augmented_20Generation_20for_20Enhanced_20AI_20Outputs.png",
+    "credlyUrl": "https://www.credly.com/badges/a6032065-1b60-41da-ae03-d4fe8171d5a0",
+    "category": "ai",
+    "skills": [
+      "Analytical Thinking",
+      "Generative AI",
+      "PWID-B1043500",
+      "Problem Solving",
+      "RAG"
+    ]
+  },
+  {
+    "id": "00470932-8bae-40d3-a221-e422c1cde397",
+    "title": "Bobathon Innovator",
+    "description": "The badge earner has participated in the Bobathon, demonstrating skills and capabilities of an agile project team in alignment with teamwork & collaboration to create a prototype of an innovative, working solution to a given problem statement.",
+    "issuer": "IBM",
+    "issuedDate": "May 2026",
+    "rawDate": "2026-05-29",
+    "imageUrl": "https://images.credly.com/images/07e82b6c-689d-4cb6-8b0e-25b81dc989f8/Bobathon-innovator-badge-v2.png",
+    "credlyUrl": "https://www.credly.com/badges/00470932-8bae-40d3-a221-e422c1cde397",
+    "category": "enterprise",
+    "skills": [
+      "Agile",
+      "Coding",
+      "Hackathon",
+      "Innovation",
+      "Problem Solving"
+    ]
+  },
+  {
+    "id": "c47d4968-0ba2-4beb-bf44-fdb0ec36d6ff",
+    "title": "AWS Cloud Quest: Cloud Practitioner - Training Badge",
+    "description": "Earners of this badge have demonstrated basic solution building knowledge using AWS services and have a fundamental understanding of AWS Cloud concepts. Badge earners have acquired hands-on experience with compute, networking, database and security services.",
+    "issuer": "Amazon Web Services Training and Certification",
+    "issuedDate": "May 2026",
+    "rawDate": "2026-05-27",
+    "imageUrl": "https://images.credly.com/images/30816e43-2550-4e1c-be22-3f03c5573bb9/blob",
+    "credlyUrl": "https://www.credly.com/badges/c47d4968-0ba2-4beb-bf44-fdb0ec36d6ff",
+    "category": "cloud",
+    "skills": [
+      "AWS",
+      "AWS Cloud",
+      "AWS Cloud Computing",
+      "AWS Cloud Foundations",
+      "Amazon Web Services (AWS)"
+    ]
+  },
+  {
+    "id": "32159a89-9e3a-4e82-86e2-fd67cc81daee",
+    "title": "Building RAG Apps Using MongoDB",
+    "description": "This digital credential validates your knowledge in building Retrieval-Augmented Generation (RAG) applications with MongoDB. It recognizes your understanding of integrating vector search, optimizing retrieval workflows, and enhancing LLM-powered apps.",
+    "issuer": "MongoDB",
+    "issuedDate": "May 2026",
+    "rawDate": "2026-05-27",
+    "imageUrl": "https://images.credly.com/images/2aff887d-ee1e-479f-b26f-dcb20d647bd6/blob",
+    "credlyUrl": "https://www.credly.com/badges/32159a89-9e3a-4e82-86e2-fd67cc81daee",
+    "category": "ai",
+    "skills": [
+      "GenAI",
+      "MongoDB",
+      "RAG"
+    ]
+  },
+  {
+    "id": "fbe0f28a-448b-4a82-bfb0-2c7ddaf66001",
+    "title": "AWS Partner: Agentic AI Essentials - Training Badge",
+    "description": "This course explores agentic AI solutions, advancing beyond generative AI fundamentals. By now, students know how agentic AI represents the convergence of distributed systems expertise with modern AI reasoning capabilities, building directly on the generative AI foundation they already understand.",
+    "issuer": "Amazon Web Services Training and Certification",
+    "issuedDate": "May 2026",
+    "rawDate": "2026-05-26",
+    "imageUrl": "https://images.credly.com/images/cb620644-88e4-4ee7-83a2-d33a6181e4b8/blob",
+    "credlyUrl": "https://www.credly.com/badges/fbe0f28a-448b-4a82-bfb0-2c7ddaf66001",
+    "category": "ai",
+    "skills": [
+      "AI Agents",
+      "Agent-based Models (ABM)",
+      "Agentic AI",
+      "Amazon Augmented AI (Amazon A2I)",
+      "Amazon Web Services (AWS)"
+    ]
+  },
+  {
+    "id": "e2096e86-efa6-4084-8e0d-3d037d61dd02",
+    "title": "watsonx Orchestrate Technical Sales Intermediate",
+    "description": "This badge earner demonstrates technical sales knowledge and skills for watsonx Orchestrate. They can discuss and persuasively position watsonx Orchestrate to clients. Additionally, they can deliver a compelling technical demonstration that combines multiple watsonx Orchestrate skills to support business scenarios utilizing pre-built skills, conversational AI and decision management.",
+    "issuer": "IBM",
+    "issuedDate": "May 2026",
+    "rawDate": "2026-05-26",
+    "imageUrl": "https://images.credly.com/images/94c4be15-befd-41ef-a955-c6fe458d0ed1/watsonx_20Orchestrate_20Technical_20Sales_20Intermediate.png",
+    "credlyUrl": "https://www.credly.com/badges/e2096e86-efa6-4084-8e0d-3d037d61dd02",
+    "category": "ai",
+    "skills": [
+      "Business Automation",
+      "Orchestrate",
+      "PWID-B0935200",
+      "Sales",
+      "Sales - Cloud"
+    ]
+  },
+  {
+    "id": "a326bd13-6b5a-4cf7-89ea-cc8fbe0717bd",
+    "title": "IBM Generative & Agentic AI Foundation",
+    "description": "The badge earner is able to competently engage in conversations with clients about generative and agentic AI technology, capabilities, value, risks, and ethical concerns. They are able to use the generative and agentic AI capabilities of IBM Consulting Advantage to be more productive and to create higher quality work products and client solutions.",
+    "issuer": "IBM",
+    "issuedDate": "Apr 2026",
+    "rawDate": "2026-04-15",
+    "imageUrl": "https://images.credly.com/images/95ae9d80-bc45-40fa-84a1-45cba63bd44b/IBM-Generative-and-Agentic-AI-Foundation.png",
+    "credlyUrl": "https://www.credly.com/badges/a326bd13-6b5a-4cf7-89ea-cc8fbe0717bd",
+    "category": "ai",
+    "skills": [
+      "Generative AI",
+      "IBM Strategic Partnerships",
+      "IBM watsonx"
+    ]
+  },
+  {
+    "id": "f0f7311b-1049-40d0-a363-8d7e5ea52b45",
+    "title": "Building AI-Powered Search with MongoDB Vector Search",
+    "description": "This digital credential validates your knowledge in creating intelligent, AI-powered search experiences for applications using MongoDB Atlas Vector Search. It recognizes your understanding of indexing, embeddings, and retrieval strategies.",
+    "issuer": "MongoDB",
+    "issuedDate": "Feb 2026",
+    "rawDate": "2026-02-18",
+    "imageUrl": "https://images.credly.com/images/730e9c82-7869-4288-b580-9f8500a94465/blob",
+    "credlyUrl": "https://www.credly.com/badges/f0f7311b-1049-40d0-a363-8d7e5ea52b45",
+    "category": "ai",
+    "skills": [
+      "AI",
+      "Document Retrieval",
+      "Elasticsearch",
+      "GenAI",
+      "Information Cataloging"
+    ]
+  },
+  {
+    "id": "059f7055-7119-4b20-bf4a-dbf5e92f67ac",
+    "title": "IBM Growth Behaviors",
+    "description": "This badge earner understands and practices behaviors that foster a growth culture we all need in order to drive new ideas, collaboration, inclusion and speed that unleash our full potential and leads to growth. The IBM Growth Behaviors are Growth Minded, Trusted, Team Focused, Courageous, Resourceful and Outcome Focused.",
+    "issuer": "IBM",
+    "issuedDate": "Feb 2026",
+    "rawDate": "2026-02-18",
+    "imageUrl": "https://images.credly.com/images/7bdbf172-7abf-4335-93de-f357a04b8903/69eb775cc80a2549e6edea71.png",
+    "credlyUrl": "https://www.credly.com/badges/059f7055-7119-4b20-bf4a-dbf5e92f67ac",
+    "category": "ai",
+    "skills": [
+      "Courageous",
+      "Growth Behaviors",
+      "Growth Minded",
+      "Outcome Focused",
+      "People Skills"
+    ]
+  },
+  {
+    "id": "76cb65ab-e573-45ad-ac1a-79a1b50a421a",
+    "title": "2025 IBMer watsonx Challenge",
+    "description": "The badge earner participated in the 2025 IBMer watsonx Challenge. This badge recognizes foundation-level learning and competence in agentic AI using key products like watsonx Orchestrate and/or IBM Strategic Partner products. Badge holders may also have applied experience using IBM Consulting Advantage in the Challenge. This badge signifies the individual's knowledge of agentic AI, their ability to apply that knowledge practically, and their potential to drive agentic AI solution development.",
+    "issuer": "IBM",
+    "issuedDate": "Aug 2025",
+    "rawDate": "2025-08-12",
+    "imageUrl": "https://images.credly.com/images/d7c25044-d214-421c-bc32-9636a2420c14/2025-IBMer-watsonx-Challenge.png",
+    "credlyUrl": "https://www.credly.com/badges/76cb65ab-e573-45ad-ac1a-79a1b50a421a",
+    "category": "ai",
+    "skills": [
+      "AI",
+      "Agentic AI",
+      "Agents",
+      "Artificial Intelligence",
+      "Generative AI"
+    ]
+  },
+  {
+    "id": "8d1adac2-559b-4d3b-90d3-e7e1a128ab1b",
+    "title": "IBM Delivery Central Platform Foundations",
+    "description": "The badge earner has acquired foundational level knowledge of IBM Delivery Central Platform (IDCP) and can successfully use the platform for Project Execution / Management.",
+    "issuer": "IBM",
+    "issuedDate": "Feb 2025",
+    "rawDate": "2025-02-24",
+    "imageUrl": "https://images.credly.com/images/bef4952f-f3d5-49e8-895f-072149aad1a7/image.png",
+    "credlyUrl": "https://www.credly.com/badges/8d1adac2-559b-4d3b-90d3-e7e1a128ab1b",
+    "category": "cloud",
+    "skills": [
+      "Data Analytics",
+      "Data Visualization",
+      "Delivery Execution",
+      "Delivery Management",
+      "Quality Assurance"
+    ]
+  },
+  {
+    "id": "90800c21-1b58-42a5-95ef-6722eaf3fe79",
+    "title": "IBM Consulting Way Habits - Foundational",
+    "description": "The earner of the IBM Consulting Way Badge understands the six habits of IBM Consulting and the importance of developing these habits and embedding them into their ways of working. This badge also signifies that its holder has explored and utilized the various resources IBM Consulting has in place to help IBMers succeed, such as Content+, Institute for Business Value (IBV), and Checkpoint.",
+    "issuer": "IBM",
+    "issuedDate": "Jul 2024",
+    "rawDate": "2024-07-27",
+    "imageUrl": "https://images.credly.com/images/2d07eb92-26fd-4b4c-b3a4-3283bf9dcf74/IBM-Consulting-Way-Habits---Foundational.png",
+    "credlyUrl": "https://www.credly.com/badges/90800c21-1b58-42a5-95ef-6722eaf3fe79",
+    "category": "ai",
+    "skills": [
+      "Appreciation",
+      "Career",
+      "Client Relationships",
+      "Client Trust",
+      "Collaboration"
+    ]
+  },
+  {
+    "id": "217e5de3-8250-4681-b5e4-1467d5903143",
+    "title": "IBM watsonx Essentials",
+    "description": "This badge earner understands and can articulate the AI use cases where the IBM watsonx platform helps clients deploy and embed generative AI across their businesses, manage all data sources, and accelerate responsible AI workflows. In addition, the earner understands the concepts and advantages of AI, along with IBM's AI strategy for addressing ethical and sustainable AI challenges.",
+    "issuer": "IBM",
+    "issuedDate": "Nov 2023",
+    "rawDate": "2023-11-28",
+    "imageUrl": "https://images.credly.com/images/47a15e48-3fd7-4c36-8f7e-639a65945ad8/image.png",
+    "credlyUrl": "https://www.credly.com/badges/217e5de3-8250-4681-b5e4-1467d5903143",
+    "category": "ai",
+    "skills": [
+      "AI",
+      "Artificial Intelligence",
+      "Generative AI",
+      "PWID-B0905700",
+      "Trusted Advisor"
+    ]
+  },
+  {
+    "id": "f2a10650-6ade-4719-af23-15b80453bd4b",
+    "title": "Energy, Environment and Utilities Industry Jumpstart",
+    "description": "This badge is awarded for successful completion of the Industry Jumpstart program",
+    "issuer": "IBM",
+    "issuedDate": "Jul 2023",
+    "rawDate": "2023-07-18",
+    "imageUrl": "https://images.credly.com/images/d685a2f3-218d-4147-9de6-455d0a0ddd62/Energy-Industry-Jumpstart.png",
+    "credlyUrl": "https://www.credly.com/badges/f2a10650-6ade-4719-af23-15b80453bd4b",
+    "category": "enterprise",
+    "skills": [
+      "Benchmarks",
+      "Bold Idea Creation",
+      "Business Models",
+      "Business Processes",
+      "Industry Expertise"
+    ]
+  },
+  {
+    "id": "8fba41a6-7e2e-4eb1-b391-0959f94215f7",
+    "title": "JavaScript Full Stack Development",
+    "description": "The badge earner is able to develop develop end-to-end Web Applications across front-end and back-end application stacks",
+    "issuer": "IBM",
+    "issuedDate": "Feb 2023",
+    "rawDate": "2023-02-20",
+    "imageUrl": "https://images.credly.com/images/dd396d32-0a64-4666-a901-23d4433fd255/JavaScript-Full-Stack-Development1.png",
+    "credlyUrl": "https://www.credly.com/badges/8fba41a6-7e2e-4eb1-b391-0959f94215f7",
+    "category": "cloud",
+    "skills": [
+      "APIs",
+      "Docker",
+      "Electron",
+      "GraphQL",
+      "Kubernates"
+    ]
+  },
+  {
+    "id": "7bee8538-015d-4728-bb97-27517d14c660",
+    "title": "IBM Garage Essentials",
+    "description": "This badge earner is able to demonstrate understanding of IBM Garage Methodology, assets and platforms.",
+    "issuer": "IBM",
+    "issuedDate": "May 2022",
+    "rawDate": "2022-05-20",
+    "imageUrl": "https://images.credly.com/images/fb718a87-6d0d-4a6d-8068-677f1bec78f2/IBM_Garage_Essentials.png",
+    "credlyUrl": "https://www.credly.com/badges/7bee8538-015d-4728-bb97-27517d14c660",
+    "category": "ai",
+    "skills": [
+      "Agile",
+      "Design Thinking",
+      "IBM Garage",
+      "Methodology",
+      "PWID-B0489200"
+    ]
+  },
+  {
+    "id": "8535923d-d723-481a-bb2c-0ab6e3e3809d",
+    "title": "IBM Garage Foundation",
+    "description": "This badge earner has gained a basic understanding and skill necessary to perform in an IBM Garage engagement.",
+    "issuer": "IBM",
+    "issuedDate": "May 2022",
+    "rawDate": "2022-05-20",
+    "imageUrl": "https://images.credly.com/images/9beccf39-df2f-4025-b971-3a7ec6dfdbfa/image.png",
+    "credlyUrl": "https://www.credly.com/badges/8535923d-d723-481a-bb2c-0ab6e3e3809d",
+    "category": "ai",
+    "skills": [
+      "Design Thinking",
+      "IBM Garage",
+      "Methodology",
+      "PWID-B0237900"
+    ]
+  },
+  {
+    "id": "e3d1d90a-72c0-4301-b696-88da827b1f3f",
+    "title": "Enterprise Design Thinking Practitioner",
+    "description": "The earner has acquired knowledge of applying Enterprise Design Thinking and its value. As a Practitioner, the badge earner finds opportunities to try it out in their every day work.",
+    "issuer": "IBM",
+    "issuedDate": "Jan 2022",
+    "rawDate": "2022-01-07",
+    "imageUrl": "https://images.credly.com/images/bc08972c-3c7d-4b99-82a0-c94bcca36674/Badges_v8-07_Practitioner.png",
+    "credlyUrl": "https://www.credly.com/badges/e3d1d90a-72c0-4301-b696-88da827b1f3f",
+    "category": "enterprise",
+    "skills": [
+      "Design",
+      "Empathy",
+      "Experience Design",
+      "Ideation",
+      "PWID-B0495200"
+    ]
+  },
+  {
+    "id": "ea3f8407-43e3-44ac-a715-cbf8b72da782",
+    "title": "JavaScript Front End Development",
+    "description": "The badge earner is able to develop Front End JavaScript-based Single Page and progressive Web applications.",
+    "issuer": "IBM",
+    "issuedDate": "Jan 2022",
+    "rawDate": "2022-01-04",
+    "imageUrl": "https://images.credly.com/images/2acbb8fa-6b28-4b55-87e9-da0839a70ceb/JavaScript-Front-End-Development.png",
+    "credlyUrl": "https://www.credly.com/badges/ea3f8407-43e3-44ac-a715-cbf8b72da782",
+    "category": "cloud",
+    "skills": [
+      "Advanced-js",
+      "Angular",
+      "Deployment",
+      "Ibm-cloud",
+      "PWA"
+    ]
+  },
+  {
+    "id": "9772ad1f-aaae-435c-a639-5817c31f0366",
+    "title": "IBM Agile Explorer",
+    "description": "The Agile Explorer has a foundational understanding of Agile values, principles, and practices that allows them to initiate an Agile conversation with co-workers and colleagues. This badge is available to IBM employees only.",
+    "issuer": "IBM",
+    "issuedDate": "Dec 2021",
+    "rawDate": "2021-12-16",
+    "imageUrl": "https://images.credly.com/images/a972f054-be07-4845-85c7-95c8d11852f5/IBM-Agile-Explorer.png",
+    "credlyUrl": "https://www.credly.com/badges/9772ad1f-aaae-435c-a639-5817c31f0366",
+    "category": "enterprise",
+    "skills": [
+      "Agile",
+      "Agile Kanban",
+      "Agile Operations",
+      "Collaboration",
+      "Flexible"
+    ]
+  }
+]

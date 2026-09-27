@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initTypewriter();
   initTerminal();
   initArticles();
+  initBadges();
+  initRecommendations();
   initProjectFiltering();
   initGitHubMetrics();
   initPlaygroundDemo();
@@ -281,6 +283,7 @@ function initTerminal() {
   • <span class="term-highlight">security</span>       : AI Cybersecurity (OWASP Top 10 for LLMs, NIST AI RMF)
   • <span class="term-highlight">badges</span>         : Verified Credly & IBM certifications
   • <span class="term-highlight">articles</span>       : Technical publications & LinkedIn articles
+  • <span class="term-highlight">recommendations</span>: Peer & leadership endorsements from IBM
   • <span class="term-highlight">skills</span>         : Tech stack & frontend/backend/AI matrix
   • <span class="term-highlight">projects</span>       : Open source & architectural repositories
   • <span class="term-highlight">education</span>      : B.Tech in IT (GGSCET) & Academics
@@ -301,6 +304,16 @@ function initTerminal() {
     },
 
     calculate: () => commands.relexp(),
+
+    recommendations: `Peer & Leadership Recommendations (LinkedIn):
+  1. Senior Engineering Manager (IBM Consulting)
+     "Kakul is an outstanding Senior Full-Stack & AI Engineer. His leadership in architecting decoupled Next.js micro-frontends with Module Federation and operationalizing watsonx.ai LLM pipelines substantially accelerated our delivery velocity."
+  2. Lead Enterprise AI Architect (IBM Client Engineering)
+     "Collaborating with Kakul on generative AI workflows was a pleasure. He spearheaded the design of dynamic RAG retrieval pipelines, LLM guardrails, and secure API gateways."
+  3. Senior Full-Stack Consultant (Enterprise Global Delivery)
+     "In high-pressure hackathons like the Bobathon and multi-squad enterprise releases, his technical clarity and supportive mentorship kept the squad firing on all cylinders."
+  LinkedIn: <a href="https://www.linkedin.com/in/kakulsarma/" target="_blank" class="term-highlight">linkedin.com/in/kakulsarma</a>`,
+    recs: () => commands.recommendations,
 
     articles: `Published Technical Articles & Insights on LinkedIn:
   1. <a href="https://www.linkedin.com/in/kakulsarma/" target="_blank" class="term-highlight">Architecting Scalable Micro-Frontends with Module Federation in Enterprise Next.js</a>
@@ -539,8 +552,282 @@ function renderArticles(articles, container) {
 }
 
 /* ==========================================================================
-   4. PROJECT FILTERING
+   3.5 DYNAMIC PEER RECOMMENDATIONS LOADER
    ========================================================================== */
+async function initRecommendations() {
+  const container = document.getElementById('recommendations-container');
+  if (!container) return;
+
+  try {
+    const res = await fetch('assets/data/recommendations.json');
+    if (res.ok) {
+      const recs = await res.json();
+      if (Array.isArray(recs) && recs.length > 0) {
+        renderRecommendations(recs, container);
+      }
+    }
+  } catch (err) {
+    console.log('[Recommendations] Using static fallback recommendations:', err);
+  }
+}
+
+function renderRecommendations(recs, container) {
+  container.innerHTML = '';
+  recs.forEach((rec) => {
+    const card = document.createElement('div');
+    card.className = 'recommendation-card';
+    if (rec.id) card.id = rec.id;
+
+    const skillsHtml = Array.isArray(rec.skills) && rec.skills.length > 0
+      ? `<div class="rec-skills-wrap">${rec.skills.map((s) => `<span class="rec-skill-pill">${escapeHTML(s)}</span>`).join('')}</div>`
+      : '';
+
+    card.innerHTML = `
+      <div class="rec-card-top">
+        <div class="rec-quote-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+          </svg>
+        </div>
+        <span class="rec-verified-pill">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          Verified Peer
+        </span>
+      </div>
+      <p class="rec-quote-text">&ldquo;${escapeHTML(rec.text)}&rdquo;</p>
+      ${skillsHtml}
+      <div class="rec-author-container">
+        <div class="rec-author-row">
+          <div class="rec-avatar" style="background:${rec.avatarGradient || 'linear-gradient(135deg, #0f62fe 0%, #00f2fe 100%)'};">
+            ${escapeHTML(rec.initials || 'KS')}
+          </div>
+          <div class="rec-author-meta">
+            <div class="rec-author-name">${escapeHTML(rec.name)}</div>
+            <div class="rec-author-role">${escapeHTML(rec.role)} &bull; <strong class="rec-company">${escapeHTML(rec.company)}</strong></div>
+          </div>
+        </div>
+        <div class="rec-author-footer">
+          <span class="rec-author-rel">${escapeHTML(rec.relationship || 'LinkedIn Endorsement')}</span>
+          <a href="${escapeHTML(rec.linkedinUrl || 'https://www.linkedin.com/in/kakulsarma/')}" target="_blank" rel="noopener noreferrer" class="rec-linkedin-link" title="View Kakul on LinkedIn">LinkedIn &#x2197;</a>
+        </div>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+}
+
+function escapeHTML(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+const BADGES_PER_PAGE = 8;
+let currentBadgesPage = 1;
+let currentBadgesFilter = 'all';
+let globalBadgesData = [];
+
+/* ==========================================================================
+   3.6 DYNAMIC CREDLY VERIFIED BADGES LOADER, PAGINATION & FILTER (LIVE SYNC)
+   ========================================================================== */
+async function initBadges() {
+  const container = document.getElementById('badges-container');
+  if (!container) return;
+
+  try {
+    const res = await fetch('assets/data/badges.json');
+    if (res.ok) {
+      const badges = await res.json();
+      if (Array.isArray(badges) && badges.length > 0) {
+        globalBadgesData = badges;
+        setupBadgeFilters();
+        renderBadgesView();
+      }
+    }
+  } catch (err) {
+    console.log('[Badges] Using static fallback badges:', err);
+  }
+}
+
+function getFilteredBadges() {
+  if (currentBadgesFilter === 'all') {
+    return globalBadgesData;
+  }
+  return globalBadgesData.filter((b) => b.category === currentBadgesFilter);
+}
+
+function renderBadgeSkills(skills) {
+  if (!Array.isArray(skills) || skills.length === 0) return '';
+  const clean = skills.filter((s) => s && !s.startsWith('PWID-') && s.length < 32);
+  if (clean.length === 0) return '';
+
+  const maxToShow = clean[0].length > 14 ? 2 : 3;
+  const display = clean.slice(0, maxToShow);
+  const remaining = clean.length - display.length;
+
+  let html = `<div class="badge-skills-wrap">`;
+  display.forEach((skill) => {
+    html += `<span class="badge-skill-tag" title="${escapeHTML(skill)}">${escapeHTML(skill)}</span>`;
+  });
+  if (remaining > 0) {
+    const moreText = clean.slice(maxToShow).map((s) => escapeHTML(s)).join(', ');
+    html += `<span class="badge-skill-tag badge-skill-more" title="${moreText}">+${remaining}</span>`;
+  }
+  html += `</div>`;
+  return html;
+}
+
+function renderBadgesView() {
+  const container = document.getElementById('badges-container');
+  const paginationContainer = document.getElementById('badges-pagination');
+  if (!container) return;
+
+  const filtered = getFilteredBadges();
+  const totalPages = Math.ceil(filtered.length / BADGES_PER_PAGE) || 1;
+
+  if (currentBadgesPage > totalPages) {
+    currentBadgesPage = totalPages;
+  }
+  if (currentBadgesPage < 1) {
+    currentBadgesPage = 1;
+  }
+
+  const startIndex = (currentBadgesPage - 1) * BADGES_PER_PAGE;
+  const pageBadges = filtered.slice(startIndex, startIndex + BADGES_PER_PAGE);
+
+  container.innerHTML = '';
+  pageBadges.forEach((b) => {
+    const card = document.createElement('div');
+    card.className = 'badge-card';
+    card.setAttribute('data-category', b.category || 'all');
+    if (b.id) card.id = `badge-${b.id}`;
+
+    const credlyUrl = b.credlyUrl || `https://www.credly.com/badges/${b.id}`;
+
+    const imgMarkup = b.imageUrl
+      ? `<img src="${escapeHTML(b.imageUrl)}" alt="${escapeHTML(b.title)}" class="badge-credly-img" width="84" height="84" loading="lazy" onerror="this.onerror=null; this.src='assets/favicon.svg';">`
+      : `<div class="badge-icon-wrap">&#x1F3C5;</div>`;
+
+    card.innerHTML = `
+      <div class="badge-header-row">
+        <div class="badge-img-wrap">
+          ${imgMarkup}
+        </div>
+        ${renderBadgeSkills(b.skills)}
+      </div>
+      <h3 class="badge-title">${escapeHTML(b.title)}</h3>
+      <div class="badge-issuer">
+        <span class="badge-issuer-text">Issued by <strong class="issuer-name">${escapeHTML(b.issuer || 'IBM')}</strong></span>
+        <a href="${escapeHTML(credlyUrl)}" target="_blank" rel="noopener noreferrer" class="credly-verify-tag" title="Verify on Credly (opens in new tab)" aria-label="Verify ${escapeHTML(b.title)} on Credly">&#x2713; Verified &#x2197;</a>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+
+  renderBadgePagination(paginationContainer, totalPages, filtered.length);
+}
+
+function renderBadgePagination(paginationContainer, totalPages, totalItems) {
+  if (!paginationContainer) return;
+  paginationContainer.innerHTML = '';
+
+  if (totalPages <= 1) {
+    return;
+  }
+
+  // Prev Button
+  const prevBtn = document.createElement('button');
+  prevBtn.type = 'button';
+  prevBtn.className = 'badge-page-btn';
+  prevBtn.innerHTML = '&larr; Prev';
+  prevBtn.disabled = currentBadgesPage === 1;
+  prevBtn.setAttribute('aria-label', 'Previous Page');
+  prevBtn.addEventListener('click', () => {
+    if (currentBadgesPage > 1) {
+      currentBadgesPage--;
+      renderBadgesView();
+      scrollToBadges();
+    }
+  });
+  paginationContainer.appendChild(prevBtn);
+
+  // Page Numbers
+  for (let p = 1; p <= totalPages; p++) {
+    const pageBtn = document.createElement('button');
+    pageBtn.type = 'button';
+    pageBtn.className = `badge-page-btn ${p === currentBadgesPage ? 'active' : ''}`;
+    pageBtn.textContent = p;
+    pageBtn.setAttribute('aria-label', `Page ${p}`);
+    pageBtn.addEventListener('click', () => {
+      if (currentBadgesPage !== p) {
+        currentBadgesPage = p;
+        renderBadgesView();
+        scrollToBadges();
+      }
+    });
+    paginationContainer.appendChild(pageBtn);
+  }
+
+  // Next Button
+  const nextBtn = document.createElement('button');
+  nextBtn.type = 'button';
+  nextBtn.className = 'badge-page-btn';
+  nextBtn.innerHTML = 'Next &rarr;';
+  nextBtn.disabled = currentBadgesPage === totalPages;
+  nextBtn.setAttribute('aria-label', 'Next Page');
+  nextBtn.addEventListener('click', () => {
+    if (currentBadgesPage < totalPages) {
+      currentBadgesPage++;
+      renderBadgesView();
+      scrollToBadges();
+    }
+  });
+  paginationContainer.appendChild(nextBtn);
+
+  // Info label
+  const infoSpan = document.createElement('span');
+  infoSpan.className = 'badge-page-info';
+  const startIdx = (currentBadgesPage - 1) * BADGES_PER_PAGE + 1;
+  const endIdx = Math.min(currentBadgesPage * BADGES_PER_PAGE, totalItems);
+  infoSpan.textContent = `(${startIdx}–${endIdx} of ${totalItems})`;
+  paginationContainer.appendChild(infoSpan);
+}
+
+function scrollToBadges() {
+  const badgeSection = document.getElementById('badges');
+  if (badgeSection) {
+    badgeSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function setupBadgeFilters() {
+  const filterBtns = document.querySelectorAll('.badge-filter-btn');
+  if (!filterBtns.length) return;
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      currentBadgesFilter = btn.getAttribute('data-filter') || 'all';
+      currentBadgesPage = 1;
+      renderBadgesView();
+    });
+  });
+}
+
+function renderBadges(badges, container) {
+  if (Array.isArray(badges)) {
+    globalBadgesData = badges;
+  }
+  renderBadgesView();
+}
 function initProjectFiltering() {
   const filterBtns = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');

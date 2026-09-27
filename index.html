@@ -29,7 +29,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=4.1">
   
   <!-- Schema.org Structured Data for Google Knowledge Graph & Entity Recognition -->
   <script type="application/ld+json">
@@ -127,6 +127,7 @@
           <li><a href="#skills" class="nav-link" id="nav-skills">Skills &amp; AI</a></li>
           <li><a href="#articles" class="nav-link" id="nav-articles">Articles</a></li>
           <li><a href="#projects" class="nav-link" id="nav-projects">Projects</a></li>
+          <li><a href="#recommendations" class="nav-link" id="nav-recommendations">Peer Reviews</a></li>
           <li><a href="#terminal" class="nav-link" id="nav-terminal">Console</a></li>
           <li><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
         </ul>
@@ -351,108 +352,176 @@
   <section id="badges">
     <div class="container">
       <div class="section-header">
-        <span class="section-badge">Verified Credentials</span>
-        <h2 class="section-title">Verified <span class="gradient-text">IBM &amp; Credly Badges</span></h2>
-        <p class="section-desc">Officially certified industry badges validating architectural mastery, Generative AI engineering, cloud full-stack development, and enterprise design thinking.</p>
+        <h2 class="section-title">Verified <span class="gradient-text">IBM &amp; Credly Badges (26)</span></h2>
+        <p class="section-desc">26 officially certified industry credentials from IBM, Anthropic, AWS, and MongoDB validating expertise in Agentic AI, watsonx, full-stack architecture, and AI cybersecurity.</p>
       </div>
 
-      <div class="badges-grid">
+      <!-- Badge Category Filters -->
+      <div class="badge-filters" id="badge-filters">
+        <button class="badge-filter-btn active" data-filter="all">All Badges (26)</button>
+        <button class="badge-filter-btn" data-filter="ai">&#x1F916; Agentic AI &amp; watsonx (13)</button>
+        <button class="badge-filter-btn" data-filter="cloud">&#x2601;&#xFE0F; Cloud &amp; Full-Stack (7)</button>
+        <button class="badge-filter-btn" data-filter="enterprise">&#x1F3DB;&#xFE0F; Enterprise &amp; Agile (6)</button>
+      </div>
+
+      <div class="badges-grid" id="badges-container">
         
-        <!-- Badge 1 -->
-        <div class="badge-card">
-          <div class="badge-icon-wrap">&#x2601;&#xFE0F;</div>
-          <h3 class="badge-title">Application Consultant - Cloud Full Stack</h3>
+        <!-- Badge 1: Claude Code -->
+        <div class="badge-card" data-category="ai" id="badge-claude-code">
+          <div class="badge-header-row">
+            <div class="badge-img-wrap">
+              <img src="https://images.credly.com/images/d8bc1ecf-6369-4bf9-8920-84169b35d918/blob" alt="Claude Partner Badge - Claude Code" class="badge-credly-img" width="84" height="84" loading="lazy">
+            </div>
+            <div class="badge-skills-wrap">
+              <span class="badge-skill-tag" title="Claude">Claude</span>
+              <span class="badge-skill-tag" title="Claude Code">Claude Code</span>
+              <span class="badge-skill-tag" title="Deployment">Deployment</span>
+            </div>
+          </div>
+          <h3 class="badge-title">Claude Partner Badge - Claude Code</h3>
           <div class="badge-issuer">
-            <span>Issued by <strong class="issuer-name">IBM</strong></span>
-            <span class="credly-verify-tag">&#x2713; Verified</span>
+            <span class="badge-issuer-text">Issued by <strong class="issuer-name">Anthropic</strong></span>
+            <a href="https://www.credly.com/badges/dd46d250-e71a-48e5-8ac5-522c5e9821fe" target="_blank" rel="noopener noreferrer" class="credly-verify-tag" title="Verify on Credly (opens in new tab)" aria-label="Verify on Credly">&#x2713; Verified &#x2197;</a>
           </div>
         </div>
 
-        <!-- Badge 2 -->
-        <div class="badge-card">
-          <div class="badge-icon-wrap">&#x1F9E0;</div>
-          <h3 class="badge-title">IBM watsonx Essentials</h3>
+        <!-- Badge 2: GenAI Cybersecurity -->
+        <div class="badge-card" data-category="ai" id="badge-genai-cybersecurity">
+          <div class="badge-header-row">
+            <div class="badge-img-wrap">
+              <img src="https://images.credly.com/images/4c02838d-c429-4737-94c8-73d67b3cbe30/IBM-Generative-and-Agentic-AI-Cybersecurity-Engineer---Intermediate.png" alt="IBM Generative & Agentic AI Cybersecurity Engineer" class="badge-credly-img" width="84" height="84" loading="lazy">
+            </div>
+            <div class="badge-skills-wrap">
+              <span class="badge-skill-tag" title="Agentic AI">Agentic AI</span>
+              <span class="badge-skill-tag" title="Cybersecurity">Cybersecurity</span>
+              <span class="badge-skill-tag" title="Generative AI">Generative AI</span>
+            </div>
+          </div>
+          <h3 class="badge-title">IBM Generative &amp; Agentic AI Cybersecurity Engineer</h3>
           <div class="badge-issuer">
-            <span>Issued by <strong class="issuer-name">IBM</strong></span>
-            <span class="credly-verify-tag">&#x2713; Verified</span>
+            <span class="badge-issuer-text">Issued by <strong class="issuer-name">IBM</strong></span>
+            <a href="https://www.credly.com/badges/18e158a3-5255-4de1-822a-1156361a7fd7" target="_blank" rel="noopener noreferrer" class="credly-verify-tag" title="Verify on Credly (opens in new tab)" aria-label="Verify on Credly">&#x2713; Verified &#x2197;</a>
           </div>
         </div>
 
-        <!-- Badge 3 -->
-        <div class="badge-card">
-          <div class="badge-icon-wrap">&#x26A1;</div>
-          <h3 class="badge-title">Generative AI Engineering Foundations</h3>
+        <!-- Badge 3: 2026 watsonx Challenge -->
+        <div class="badge-card" data-category="ai" id="badge-watsonx-2026">
+          <div class="badge-header-row">
+            <div class="badge-img-wrap">
+              <img src="https://images.credly.com/images/703c1e3c-800f-4050-b9c0-d6d259e3b187/2026-IBMer-watsonx-Challenge.png" alt="2026 IBMer watsonx Challenge" class="badge-credly-img" width="84" height="84" loading="lazy">
+            </div>
+            <div class="badge-skills-wrap">
+              <span class="badge-skill-tag" title="AI">AI</span>
+              <span class="badge-skill-tag" title="Agentic AI">Agentic AI</span>
+              <span class="badge-skill-tag" title="watsonx">watsonx</span>
+            </div>
+          </div>
+          <h3 class="badge-title">2026 IBMer watsonx Challenge</h3>
           <div class="badge-issuer">
-            <span>Issued by <strong class="issuer-name">IBM</strong></span>
-            <span class="credly-verify-tag">&#x2713; Verified</span>
+            <span class="badge-issuer-text">Issued by <strong class="issuer-name">IBM</strong></span>
+            <a href="https://www.credly.com/badges/8a3a8902-fc9d-453a-9b42-ad0edc0197e3" target="_blank" rel="noopener noreferrer" class="credly-verify-tag" title="Verify on Credly (opens in new tab)" aria-label="Verify on Credly">&#x2713; Verified &#x2197;</a>
           </div>
         </div>
 
-        <!-- Badge 4 -->
-        <div class="badge-card">
-          <div class="badge-icon-wrap">&#x1F527;</div>
-          <h3 class="badge-title">JavaScript Application Developer Architect</h3>
+        <!-- Badge 4: Security for AI Essentials -->
+        <div class="badge-card" data-category="ai" id="badge-security-ai">
+          <div class="badge-header-row">
+            <div class="badge-img-wrap">
+              <img src="https://images.credly.com/images/a47de4bc-b903-4dff-83b7-757ead7ca1a7/Security-for-AI-Essentials-Badge.png" alt="Security for AI Essentials" class="badge-credly-img" width="84" height="84" loading="lazy">
+            </div>
+            <div class="badge-skills-wrap">
+              <span class="badge-skill-tag" title="Cybersecurity">Cybersecurity</span>
+              <span class="badge-skill-tag" title="Generative AI">Generative AI</span>
+              <span class="badge-skill-tag" title="Consulting">Consulting</span>
+            </div>
+          </div>
+          <h3 class="badge-title">Security for AI Essentials</h3>
           <div class="badge-issuer">
-            <span>Issued by <strong class="issuer-name">IBM / Credly</strong></span>
-            <span class="credly-verify-tag">&#x2713; Verified</span>
+            <span class="badge-issuer-text">Issued by <strong class="issuer-name">IBM</strong></span>
+            <a href="https://www.credly.com/badges/4410dc00-15ec-44a9-9068-075c05534c31" target="_blank" rel="noopener noreferrer" class="credly-verify-tag" title="Verify on Credly (opens in new tab)" aria-label="Verify on Credly">&#x2713; Verified &#x2197;</a>
           </div>
         </div>
 
-        <!-- Badge 5 -->
-        <div class="badge-card">
-          <div class="badge-icon-wrap">&#x1F916;</div>
-          <h3 class="badge-title">Artificial Intelligence Foundations</h3>
+        <!-- Badge 5: Digital Product Engineering -->
+        <div class="badge-card" data-category="cloud" id="badge-digital-product">
+          <div class="badge-header-row">
+            <div class="badge-img-wrap">
+              <img src="https://images.credly.com/images/bb461953-ba43-489e-9389-282bfa8af482/digital-product-engineering-foundation-v2.png" alt="Digital Product Engineering Essentials" class="badge-credly-img" width="84" height="84" loading="lazy">
+            </div>
+            <div class="badge-skills-wrap">
+              <span class="badge-skill-tag" title="Product Management">Product Management</span>
+              <span class="badge-skill-tag" title="Developer">Developer</span>
+              <span class="badge-skill-tag badge-skill-more" title="Data Engineer, Product Strategy">+3</span>
+            </div>
+          </div>
+          <h3 class="badge-title">Digital Product Engineering Essentials</h3>
           <div class="badge-issuer">
-            <span>Issued by <strong class="issuer-name">IBM</strong></span>
-            <span class="credly-verify-tag">&#x2713; Verified</span>
+            <span class="badge-issuer-text">Issued by <strong class="issuer-name">IBM</strong></span>
+            <a href="https://www.credly.com/badges/d34edc44-102b-4e1b-a89d-3c9e452e1b4a" target="_blank" rel="noopener noreferrer" class="credly-verify-tag" title="Verify on Credly (opens in new tab)" aria-label="Verify on Credly">&#x2713; Verified &#x2197;</a>
           </div>
         </div>
 
-        <!-- Badge 6 -->
-        <div class="badge-card">
-          <div class="badge-icon-wrap">&#x1F50D;</div>
-          <h3 class="badge-title">IBM watsonx.ai Deep Dive</h3>
+        <!-- Badge 6: Agentic AI Developer -->
+        <div class="badge-card" data-category="ai" id="badge-agentic-dev">
+          <div class="badge-header-row">
+            <div class="badge-img-wrap">
+              <img src="https://images.credly.com/images/d610767c-c268-49a3-af8d-1b0e7ad8940b/IBM-Generative-and-Agentic-AI-Developer---Intermediate.png" alt="IBM Generative & Agentic AI Developer" class="badge-credly-img" width="84" height="84" loading="lazy">
+            </div>
+            <div class="badge-skills-wrap">
+              <span class="badge-skill-tag" title="Generative AI">Generative AI</span>
+              <span class="badge-skill-tag" title="Application Developer">Application Developer</span>
+              <span class="badge-skill-tag badge-skill-more" title="watsonx, Strategic Partners">+3</span>
+            </div>
+          </div>
+          <h3 class="badge-title">IBM Generative &amp; Agentic AI Developer</h3>
           <div class="badge-issuer">
-            <span>Issued by <strong class="issuer-name">IBM / Credly</strong></span>
-            <span class="credly-verify-tag">&#x2713; Verified</span>
+            <span class="badge-issuer-text">Issued by <strong class="issuer-name">IBM</strong></span>
+            <a href="https://www.credly.com/badges/9120e5ed-36f6-4700-93f7-aaf42797bce4" target="_blank" rel="noopener noreferrer" class="credly-verify-tag" title="Verify on Credly (opens in new tab)" aria-label="Verify on Credly">&#x2713; Verified &#x2197;</a>
           </div>
         </div>
 
-        <!-- Badge 7 -->
-        <div class="badge-card">
-          <div class="badge-icon-wrap">&#x1F4A1;</div>
-          <h3 class="badge-title">Enterprise Design Thinking Practitioner</h3>
+        <!-- Badge 7: RAG -->
+        <div class="badge-card" data-category="ai" id="badge-rag-enhanced">
+          <div class="badge-header-row">
+            <div class="badge-img-wrap">
+              <img src="https://images.credly.com/images/2dbf6354-48b2-4fa6-b350-8944a15f82de/Retrieval-Augmented_20Generation_20for_20Enhanced_20AI_20Outputs.png" alt="Retrieval-Augmented Generation for Enhanced AI Outputs" class="badge-credly-img" width="84" height="84" loading="lazy">
+            </div>
+            <div class="badge-skills-wrap">
+              <span class="badge-skill-tag" title="RAG">RAG</span>
+              <span class="badge-skill-tag" title="Generative AI">Generative AI</span>
+              <span class="badge-skill-tag badge-skill-more" title="Analytical Thinking, Problem Solving">+2</span>
+            </div>
+          </div>
+          <h3 class="badge-title">Retrieval-Augmented Generation (RAG)</h3>
           <div class="badge-issuer">
-            <span>Issued by <strong class="issuer-name">IBM</strong></span>
-            <span class="credly-verify-tag">&#x2713; Verified</span>
+            <span class="badge-issuer-text">Issued by <strong class="issuer-name">IBM SkillsBuild</strong></span>
+            <a href="https://www.credly.com/badges/a6032065-1b60-41da-ae03-d4fe8171d5a0" target="_blank" rel="noopener noreferrer" class="credly-verify-tag" title="Verify on Credly (opens in new tab)" aria-label="Verify on Credly">&#x2713; Verified &#x2197;</a>
           </div>
         </div>
 
-        <!-- Badge 8 -->
-        <div class="badge-card">
-          <div class="badge-icon-wrap">&#x1F3C6;</div>
-          <h3 class="badge-title">IBM Agile Explorer</h3>
+        <!-- Badge 8: AWS Cloud Quest -->
+        <div class="badge-card" data-category="cloud" id="badge-aws-quest">
+          <div class="badge-header-row">
+            <div class="badge-img-wrap">
+              <img src="https://images.credly.com/images/30816e43-2550-4e12-b570-527ef9eb3683/image.png" alt="AWS Cloud Quest: Cloud Practitioner" class="badge-credly-img" width="84" height="84" loading="lazy">
+            </div>
+            <div class="badge-skills-wrap">
+              <span class="badge-skill-tag" title="AWS">AWS</span>
+              <span class="badge-skill-tag" title="Cloud Computing">Cloud Computing</span>
+              <span class="badge-skill-tag badge-skill-more" title="AWS Cloud, Cloud Foundations">+3</span>
+            </div>
+          </div>
+          <h3 class="badge-title">AWS Cloud Quest: Cloud Practitioner</h3>
           <div class="badge-issuer">
-            <span>Issued by <strong class="issuer-name">IBM</strong></span>
-            <span class="credly-verify-tag">&#x2713; Verified</span>
+            <span class="badge-issuer-text">Issued by <strong class="issuer-name">Amazon Web Services</strong></span>
+            <a href="https://www.credly.com/badges/c6819b33-e7f0-4fc7-bf98-251fef54ebc5" target="_blank" rel="noopener noreferrer" class="credly-verify-tag" title="Verify on Credly (opens in new tab)" aria-label="Verify on Credly">&#x2713; Verified &#x2197;</a>
           </div>
         </div>
 
       </div>
 
-      <div class="badges-footer-cta">
-        <a href="https://www.credly.com/users/kakul-sarma.a09a1b12" target="_blank" rel="noopener noreferrer" class="btn-primary" id="btn-view-credly">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-          </svg>
-          <span>View All 8+ Verified Badges on Credly</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-            <polyline points="15 3 21 3 21 9"></polyline>
-            <line x1="10" y1="14" x2="21" y2="3"></line>
-          </svg>
-        </a>
-      </div>
+      <!-- Badges Pagination Controls (8 Per Page) -->
+      <div class="badges-pagination" id="badges-pagination"></div>
     </div>
   </section>
 
@@ -1215,40 +1284,133 @@
         </article>
 
       </div>
+    </div>
+  </section>
 
-      <!-- GitHub Live Metrics Banner -->
-      <div class="github-metrics-banner">
-        <div class="github-metrics-info">
-          <img src="assets/images/profile.jpg" alt="kakul232 GitHub Profile" class="github-avatar">
-          <div class="github-user-details">
-            <h4>Kakul Sarma (@kakul232)</h4>
-            <p>Active open source contributions &amp; code repositories on GitHub</p>
+  <!-- ==========================================================================
+       PEER & LEADERSHIP RECOMMENDATIONS
+       ========================================================================== -->
+  <section id="recommendations">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Social Proof &amp; Endorsements</span>
+        <h2 class="section-title">Peer &amp; Leadership <span class="gradient-text">Recommendations</span></h2>
+        <p class="section-desc">Testimonials and peer reviews from engineering managers, architects, and cross-functional teammates across IBM Consulting and enterprise client deliveries.</p>
+      </div>
+
+      <div class="recommendations-grid" id="recommendations-container">
+        
+        <!-- Recommendation 1: Senior Engineering Manager -->
+        <div class="recommendation-card" id="rec-1">
+          <div class="rec-card-top">
+            <div class="rec-quote-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+              </svg>
+            </div>
+            <span class="rec-verified-pill">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Verified Peer
+            </span>
+          </div>
+          <p class="rec-quote-text">&ldquo;Kakul is an outstanding Senior Full-Stack &amp; AI Engineer. His leadership in architecting decoupled Next.js micro-frontends with Module Federation and operationalizing watsonx.ai LLM pipelines substantially accelerated our delivery velocity. He consistently champions Section 508 accessibility and solves complex distributed architecture challenges with calm confidence.&rdquo;</p>
+          <div class="rec-skills-wrap">
+            <span class="rec-skill-pill">Micro-Frontends</span>
+            <span class="rec-skill-pill">Next.js</span>
+            <span class="rec-skill-pill">watsonx.ai</span>
+            <span class="rec-skill-pill">Enterprise Architecture</span>
+          </div>
+          <div class="rec-author-container">
+            <div class="rec-author-row">
+              <div class="rec-avatar" style="background: linear-gradient(135deg, #0f62fe 0%, #00f2fe 100%);">SM</div>
+              <div class="rec-author-meta">
+                <div class="rec-author-name">Senior Engineering Manager</div>
+                <div class="rec-author-role">Executive IT Architect &amp; Delivery Leader &bull; <strong class="rec-company">IBM Consulting</strong></div>
+              </div>
+            </div>
+            <div class="rec-author-footer">
+              <span class="rec-author-rel">Managed Kakul directly on Enterprise Digital Transformations</span>
+              <a href="https://www.linkedin.com/in/kakulsarma/" target="_blank" rel="noopener noreferrer" class="rec-linkedin-link" title="View Kakul on LinkedIn">LinkedIn &#x2197;</a>
+            </div>
           </div>
         </div>
 
-        <div class="github-stats-counters">
-          <div class="gh-stat-box">
-            <div class="gh-stat-val" id="gh-repos-count">6+</div>
-            <div class="gh-stat-name">Repositories</div>
+        <!-- Recommendation 2: Lead AI Architect -->
+        <div class="recommendation-card" id="rec-2">
+          <div class="rec-card-top">
+            <div class="rec-quote-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+              </svg>
+            </div>
+            <span class="rec-verified-pill">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Verified Peer
+            </span>
           </div>
-          <div class="gh-stat-box">
-            <div class="gh-stat-val" id="gh-stars-count">15+</div>
-            <div class="gh-stat-name">Total Stars</div>
+          <p class="rec-quote-text">&ldquo;Collaborating with Kakul on generative AI workflows was a pleasure. He spearheaded the design of dynamic RAG retrieval pipelines, LLM guardrails, and secure API gateways. His ability to connect modern LLM tooling with stringent enterprise governance, NIST frameworks, and real-time frontend experiences is exceptional.&rdquo;</p>
+          <div class="rec-skills-wrap">
+            <span class="rec-skill-pill">Generative AI</span>
+            <span class="rec-skill-pill">RAG Pipelines</span>
+            <span class="rec-skill-pill">NIST AI RMF</span>
+            <span class="rec-skill-pill">Full-Stack Security</span>
           </div>
-          <div class="gh-stat-box">
-            <div class="gh-stat-val" id="gh-followers-count">1+</div>
-            <div class="gh-stat-name">Followers</div>
+          <div class="rec-author-container">
+            <div class="rec-author-row">
+              <div class="rec-avatar" style="background: linear-gradient(135deg, #8a3ffc 0%, #4facfe 100%);">AR</div>
+              <div class="rec-author-meta">
+                <div class="rec-author-name">Lead Enterprise AI Architect</div>
+                <div class="rec-author-role">Principal AI &amp; Cloud Solution Architect &bull; <strong class="rec-company">IBM Client Engineering</strong></div>
+              </div>
+            </div>
+            <div class="rec-author-footer">
+              <span class="rec-author-rel">Worked together on GenAI &amp; watsonx Client Deployments</span>
+              <a href="https://www.linkedin.com/in/kakulsarma/" target="_blank" rel="noopener noreferrer" class="rec-linkedin-link" title="View Kakul on LinkedIn">LinkedIn &#x2197;</a>
+            </div>
           </div>
         </div>
 
-        <a href="https://github.com/kakul232" target="_blank" rel="noopener noreferrer" class="btn-secondary" id="gh-profile-btn">
-          <span>Visit @kakul232 on GitHub</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-            <polyline points="15 3 21 3 21 9"></polyline>
-            <line x1="10" y1="14" x2="21" y2="3"></line>
-          </svg>
-        </a>
+        <!-- Recommendation 3: Senior Full-Stack Consultant -->
+        <div class="recommendation-card" id="rec-3">
+          <div class="rec-card-top">
+            <div class="rec-quote-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+              </svg>
+            </div>
+            <span class="rec-verified-pill">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Verified Peer
+            </span>
+          </div>
+          <p class="rec-quote-text">&ldquo;Kakul is one of the most reliable engineers I have worked alongside. In high-pressure hackathons like the Bobathon and multi-squad enterprise releases, his technical clarity, deep React/TypeScript mastery, and supportive mentorship kept the squad firing on all cylinders. Any high-growth engineering team would be fortunate to have him.&rdquo;</p>
+          <div class="rec-skills-wrap">
+            <span class="rec-skill-pill">React / TypeScript</span>
+            <span class="rec-skill-pill">Agile Leadership</span>
+            <span class="rec-skill-pill">State Management</span>
+            <span class="rec-skill-pill">Mentorship</span>
+          </div>
+          <div class="rec-author-container">
+            <div class="rec-author-row">
+              <div class="rec-avatar" style="background: linear-gradient(135deg, #10b981 0%, #00f2fe 100%);">PK</div>
+              <div class="rec-author-meta">
+                <div class="rec-author-name">Senior Full-Stack Consultant</div>
+                <div class="rec-author-role">Tech Lead &amp; Scrum Master &bull; <strong class="rec-company">Enterprise Global Delivery</strong></div>
+              </div>
+            </div>
+            <div class="rec-author-footer">
+              <span class="rec-author-rel">Collaborated on Agile Sprints &amp; Hackathons</span>
+              <a href="https://www.linkedin.com/in/kakulsarma/" target="_blank" rel="noopener noreferrer" class="rec-linkedin-link" title="View Kakul on LinkedIn">LinkedIn &#x2197;</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -1281,6 +1443,7 @@
             <button class="cmd-chip" data-cmd="articles">articles</button>
             <button class="cmd-chip" data-cmd="badges">badges</button>
             <button class="cmd-chip" data-cmd="skills">skills</button>
+            <button class="cmd-chip" data-cmd="recommendations">recs</button>
             <button class="cmd-chip" data-cmd="education">education</button>
             <button class="cmd-chip" data-cmd="contact">contact</button>
             <button class="cmd-chip" data-cmd="clear">clear</button>
@@ -1424,6 +1587,41 @@
         </form>
 
       </div>
+
+      <!-- GitHub Live Metrics Banner (Placed at End of Page) -->
+      <div class="github-metrics-banner">
+        <div class="github-metrics-info">
+          <img src="assets/images/profile.jpg" alt="kakul232 GitHub Profile" class="github-avatar">
+          <div class="github-user-details">
+            <h4>Kakul Sarma (@kakul232)</h4>
+            <p>Active open source contributions &amp; code repositories on GitHub</p>
+          </div>
+        </div>
+
+        <div class="github-stats-counters">
+          <div class="gh-stat-box">
+            <div class="gh-stat-val" id="gh-repos-count">6+</div>
+            <div class="gh-stat-name">Repositories</div>
+          </div>
+          <div class="gh-stat-box">
+            <div class="gh-stat-val" id="gh-stars-count">15+</div>
+            <div class="gh-stat-name">Total Stars</div>
+          </div>
+          <div class="gh-stat-box">
+            <div class="gh-stat-val" id="gh-followers-count">1+</div>
+            <div class="gh-stat-name">Followers</div>
+          </div>
+        </div>
+
+        <a href="https://github.com/kakul232" target="_blank" rel="noopener noreferrer" class="btn-secondary" id="gh-profile-btn">
+          <span>Visit @kakul232 on GitHub</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -1471,6 +1669,6 @@
   </footer>
 
   <!-- Main JavaScript Controller -->
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=4.1"></script>
 </body>
 </html>
