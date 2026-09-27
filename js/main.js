@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initThemeSwitcher();
   initNavigation();
   initContactForm();
+  initMaterialRipple();
+  initFabScroll();
 });
 
 /* ==========================================================================
@@ -155,7 +157,7 @@ function initParticleBackground() {
       this.vx = (Math.random() - 0.5) * 0.7;
       this.vy = (Math.random() - 0.5) * 0.7;
       this.radius = Math.random() * 2 + 1;
-      this.baseColor = Math.random() > 0.4 ? 'rgba(0, 242, 254, ' : 'rgba(157, 78, 221, ';
+      this.baseColor = Math.random() > 0.4 ? 'rgba(252, 163, 17, ' : 'rgba(229, 229, 229, ';
     }
 
     update() {
@@ -206,7 +208,7 @@ function initParticleBackground() {
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(0, 242, 254, ${alpha})`;
+          ctx.strokeStyle = `rgba(252, 163, 17, ${alpha})`;
           ctx.lineWidth = 0.85;
           ctx.stroke();
         }
@@ -287,7 +289,7 @@ function initTerminal() {
   • <span class="term-highlight">skills</span>         : Tech stack & frontend/backend/AI matrix
   • <span class="term-highlight">projects</span>       : Open source & architectural repositories
   • <span class="term-highlight">education</span>      : B.Tech in IT (GGSCET) & Academics
-  • <span class="term-highlight">contact</span>        : Direct phone, email, LinkedIn, Credly
+  • <span class="term-highlight">contact</span>        : Direct phone, email, LinkedIn, ORCID
   • <span class="term-highlight">clear</span>          : Clear terminal screen`,
 
     relexp: () => {
@@ -416,9 +418,8 @@ function initTerminal() {
     contact: `Direct Contact Channels:
   Email:    <span class="term-highlight">kakulsarma@gmail.com</span> / <span class="term-highlight">Kakul.Sarma@ibm.com</span>
   Phone:    <span class="term-highlight">(+91) 9871229599</span>
-  Location: Nalbari, Assam, India - 781306
   LinkedIn: <a href="https://linkedin.com/in/kakulsarma" target="_blank" class="term-highlight">linkedin.com/in/kakulsarma</a>
-  Credly:   <a href="https://www.credly.com/users/kakul-sarma.a09a1b12" target="_blank" class="term-highlight">credly.com/users/kakul-sarma.a09a1b12</a>
+  ORCID:    <a href="https://orcid.org/0009-0004-4327-501X" target="_blank" class="term-highlight">0009-0004-4327-501X</a>
   GitHub:   <a href="https://github.com/kakul232" target="_blank" class="term-highlight">github.com/kakul232</a>`
   };
 
@@ -454,7 +455,7 @@ function initTerminal() {
     } else {
       const errLine = document.createElement('div');
       errLine.className = 'term-output';
-      errLine.innerHTML = `Command not recognized: '<span style="color:#f87171">${escapeHTML(cmd)}</span>'. Type <span class="term-highlight">help</span> for valid options.`;
+      errLine.innerHTML = `Command not recognized: '<span style="color:#fca311">${escapeHTML(cmd)}</span>'. Type <span class="term-highlight">help</span> for valid options.`;
       termBody.insertBefore(errLine, termInput.parentElement);
     }
 
@@ -600,7 +601,7 @@ function renderRecommendations(recs, container) {
       ${skillsHtml}
       <div class="rec-author-container">
         <div class="rec-author-row">
-          <div class="rec-avatar" style="background:${rec.avatarGradient || 'linear-gradient(135deg, #0f62fe 0%, #00f2fe 100%)'};">
+          <div class="rec-avatar" style="background:${rec.avatarGradient || 'linear-gradient(135deg, #14213d 0%, #fca311 100%)'};">
             ${escapeHTML(rec.initials || 'KS')}
           </div>
           <div class="rec-author-meta">
@@ -907,7 +908,7 @@ function initPlaygroundDemo() {
   let time = 0;
 
   function renderWave() {
-    ctx.fillStyle = 'rgba(6, 9, 17, 0.2)';
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
     ctx.fillRect(0, 0, width, height);
 
     const speed = speedSlider ? parseFloat(speedSlider.value) : 1;
@@ -1018,8 +1019,8 @@ function initContactForm() {
         if (badge) {
           const original = badge.textContent;
           badge.textContent = 'Copied!';
-          badge.style.background = 'rgba(16, 185, 129, 0.2)';
-          badge.style.color = '#34d399';
+          badge.style.background = 'rgba(252, 163, 17, 0.2)';
+          badge.style.color = '#fca311';
           setTimeout(() => {
             badge.textContent = original;
             badge.style.background = '';
@@ -1048,3 +1049,57 @@ function initContactForm() {
     }
   });
 }
+
+/* ==========================================================================
+   10. MATERIAL DESIGN 3 RIPPLE TOUCH EFFECT
+   ========================================================================== */
+function initMaterialRipple() {
+  document.addEventListener('pointerdown', (e) => {
+    const target = e.target.closest(
+      '.btn-primary, .btn-secondary, .btn-nav-hire, .badge-filter-btn, .filter-btn, .cmd-chip, .badge-page-btn, .social-btn, .theme-toggle-btn, .md-fab, .rec-linkedin-link, .credly-verify-tag'
+    );
+    if (!target) return;
+
+    target.classList.add('md-ripple');
+    const rect = target.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height) * 2;
+    const x = e.clientX - rect.left - size / 2;
+    const y = e.clientY - rect.top - size / 2;
+
+    const ink = document.createElement('span');
+    ink.className = 'md-ripple-ink';
+    ink.style.width = `${size}px`;
+    ink.style.height = `${size}px`;
+    ink.style.left = `${x}px`;
+    ink.style.top = `${y}px`;
+
+    target.appendChild(ink);
+    setTimeout(() => {
+      ink.remove();
+    }, 650);
+  });
+}
+
+/* ==========================================================================
+   11. MATERIAL DESIGN 3 FAB BACK-TO-TOP CONTROLLER
+   ========================================================================== */
+function initFabScroll() {
+  const fab = document.getElementById('md-fab-top');
+  if (!fab) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      fab.classList.add('show');
+    } else {
+      fab.classList.remove('show');
+    }
+  });
+
+  fab.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
