@@ -1036,16 +1036,73 @@ function initContactForm() {
 
   const contactForm = document.getElementById('portfolio-contact-form');
   const alertEl = document.getElementById('contact-alert');
+  const submitBtn = document.getElementById('btn-submit-message');
 
-  contactForm?.addEventListener('submit', (e) => {
+  contactForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
-    if (alertEl) {
-      alertEl.className = 'form-alert success';
-      alertEl.textContent = 'Thank you! Your message inquiry has been received. Kakul will connect with you promptly.';
+
+    const nameInput = document.getElementById('contact-name');
+    const emailInput = document.getElementById('contact-email');
+    const messageInput = document.getElementById('contact-message');
+
+    const name = nameInput ? nameInput.value.trim() : '';
+    const email = emailInput ? emailInput.value.trim() : '';
+    const message = messageInput ? messageInput.value.trim() : '';
+
+    if (!name || !email || !message) return;
+
+    const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Sending to kakulsarma@gmail.com...</span>';
+    }
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/kakulsarma@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          message: message,
+          _subject: `New Portfolio Consulting Inquiry from ${name}`
+        })
+      });
+
+      const result = await response.json();
+
+      if (response.ok && (result.success === 'true' || result.success === true || response.status === 200)) {
+        if (alertEl) {
+          alertEl.className = 'form-alert success';
+          alertEl.style.display = 'block';
+          alertEl.textContent = 'Thank you! Your message inquiry has been successfully sent to kakulsarma@gmail.com. Kakul will connect with you promptly.';
+        }
+        contactForm.reset();
+      } else {
+        throw new Error('Failed to send via FormSubmit API');
+      }
+    } catch (err) {
+      // Fallback: Open prefilled mailto directly addressed to kakulsarma@gmail.com
+      const mailtoUrl = `mailto:kakulsarma@gmail.com?subject=${encodeURIComponent('Consulting Inquiry from ' + name)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message)}`;
+      window.location.href = mailtoUrl;
+
+      if (alertEl) {
+        alertEl.className = 'form-alert success';
+        alertEl.style.display = 'block';
+        alertEl.textContent = 'Opening your email client to send inquiry directly to kakulsarma@gmail.com...';
+      }
       contactForm.reset();
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHtml;
+      }
       setTimeout(() => {
-        alertEl.style.display = 'none';
-      }, 5000);
+        if (alertEl) alertEl.style.display = 'none';
+      }, 7000);
     }
   });
 }
