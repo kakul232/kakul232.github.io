@@ -12,8 +12,14 @@
   <meta name="keywords"
     content="Kakul Sarma, kakul232, Senior Full-Stack Engineer, Application Consultant, IBM, watsonx.ai, Next.js, React, Angular, Micro-Frontend, Module Federation, Credly, Assam">
   <meta name="author" content="Kakul Sarma">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="google-site-verification" content="google6986acfe38016e3c">
 
   <link rel="canonical" href="https://kakul232.github.io/">
+
+  <!-- High-Priority Preload for LCP Avatar Image -->
+  <link rel="preload" as="image" href="assets/images/profile.jpg" fetchpriority="high">
 
   <!-- Facebook, LinkedIn & Open Graph Protocol Meta Tags -->
   <meta property="og:site_name" content="Kakul Sarma | Portfolio &amp; Official Domain">
@@ -29,6 +35,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Kakul Sarma - Senior Full-Stack Engineer &amp; Application Consultant">
   <meta property="og:locale" content="en_US">
+  <meta property="og:updated_time" content="2026-10-01T21:00:00+05:30">
 
   <!-- LinkedIn & Facebook Profile Entities -->
   <meta property="profile:first_name" content="Kakul">
@@ -69,6 +76,36 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "ProfilePage",
+        "@id": "https://kakul232.github.io/#profilepage",
+        "url": "https://kakul232.github.io/",
+        "name": "Kakul Sarma | Senior Full-Stack Engineer & Application Consultant",
+        "isPartOf": {
+          "@id": "https://kakul232.github.io/#website"
+        },
+        "about": {
+          "@id": "https://kakul232.github.io/#person"
+        },
+        "mainEntity": {
+          "@id": "https://kakul232.github.io/#person"
+        },
+        "dateCreated": "2024-01-01T00:00:00+05:30",
+        "dateModified": "2026-10-01T21:00:00+05:30",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://kakul232.github.io/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://kakul232.github.io/"
+          }
+        ]
+      },
+      {
         "@type": "Person",
         "@id": "https://kakul232.github.io/#person",
         "name": "Kakul Sarma",
@@ -79,6 +116,7 @@
         "description": "Senior Full-Stack Engineer and Application Consultant at IBM India with 10+ years experience in Next.js, Micro-Frontends, watsonx.ai GenAI, and enterprise cloud architecture.",
         "url": "https://kakul232.github.io/",
         "image": "https://kakul232.github.io/assets/images/profile.jpg",
+        "mainEntityOfPage": "https://kakul232.github.io/",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Nalbari",
@@ -89,7 +127,17 @@
         "worksFor": {
           "@type": "Organization",
           "name": "IBM India",
-          "url": "https://www.ibm.com/"
+          "url": "https://www.ibm.com/",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/IBM",
+            "https://www.wikidata.org/wiki/Q37156"
+          ]
+        },
+        "hasOccupation": {
+          "@type": "Occupation",
+          "name": "Senior Full-Stack Engineer & Application Consultant",
+          "occupationalCategory": "15-1252.00",
+          "skills": "Next.js, React, Angular, Python, watsonx.ai, Agentic AI, Micro-Frontends, Enterprise Cloud Architecture, OWASP"
         },
         "sameAs": [
           "https://www.linkedin.com/in/kakulsarma",
@@ -105,15 +153,48 @@
           "url": "https://orcid.org/0009-0004-4327-501X"
         },
         "knowsAbout": [
-          "Full-Stack Web Development",
-          "React",
-          "Next.js",
-          "Angular",
-          "TypeScript",
-          "Python",
+          {
+            "@type": "Thing",
+            "name": "Next.js",
+            "sameAs": "https://en.wikipedia.org/wiki/Next.js"
+          },
+          {
+            "@type": "Thing",
+            "name": "React",
+            "sameAs": "https://en.wikipedia.org/wiki/React_(software)"
+          },
+          {
+            "@type": "Thing",
+            "name": "Angular",
+            "sameAs": "https://en.wikipedia.org/wiki/Angular_(web_framework)"
+          },
+          {
+            "@type": "Thing",
+            "name": "Python",
+            "sameAs": "https://en.wikipedia.org/wiki/Python_(programming_language)"
+          },
+          {
+            "@type": "Thing",
+            "name": "TypeScript",
+            "sameAs": "https://en.wikipedia.org/wiki/TypeScript"
+          },
+          {
+            "@type": "Thing",
+            "name": "Artificial Intelligence",
+            "sameAs": "https://en.wikipedia.org/wiki/Artificial_intelligence"
+          },
+          {
+            "@type": "Thing",
+            "name": "Micro-Frontends",
+            "sameAs": "https://en.wikipedia.org/wiki/Micro_frontends"
+          },
+          {
+            "@type": "Thing",
+            "name": "Computer Security",
+            "sameAs": "https://en.wikipedia.org/wiki/Computer_security"
+          },
           "Generative AI & LLMs",
           "IBM watsonx.ai",
-          "Micro-Frontend Architecture",
           "Module Federation",
           "Enterprise Cloud Security"
         ]
@@ -127,6 +208,73 @@
         "publisher": {
           "@id": "https://kakul232.github.io/#person"
         }
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://kakul232.github.io/#articles",
+        "name": "Technical Publications & Articles by Kakul Sarma",
+        "itemListElement": [
+          {
+            "@type": "TechArticle",
+            "position": 1,
+            "headline": "Architecting Scalable Micro-Frontends with Module Federation in Enterprise Next.js",
+            "description": "How to isolate autonomous business domains using Webpack Module Federation while eliminating global bundle overhead, unifying design systems, and retaining instant client rendering speeds across distributed squads.",
+            "author": { "@id": "https://kakul232.github.io/#person" },
+            "datePublished": "2026-09-01",
+            "keywords": "Micro-Frontends, Next.js, Module Federation, Architecture",
+            "url": "https://www.linkedin.com/in/kakulsarma/"
+          },
+          {
+            "@type": "TechArticle",
+            "position": 2,
+            "headline": "Operationalizing watsonx.ai & RAG Pipelines in Production JavaScript Backends",
+            "description": "A pragmatic guide to bridging enterprise LLM capabilities (watsonx.ai, OpenAI) with Node.js microservices. Covers vector embeddings, context chunking, prompt engineering, and intelligent fallback strategies for mission-critical apps.",
+            "author": { "@id": "https://kakul232.github.io/#person" },
+            "datePublished": "2026-08-01",
+            "keywords": "watsonx.ai, GenAI, RAG, Node.js",
+            "url": "https://www.linkedin.com/in/kakulsarma/"
+          },
+          {
+            "@type": "TechArticle",
+            "position": 3,
+            "headline": "Section 508 Compliance & High-Performance Rendering in Large-Scale SPAs",
+            "description": "Ensuring inclusive design and full Section 508 legal compliance without sacrificing rendering velocity. Architectural patterns for ARIA live regions, keyboard navigation flows, and automated contrast verification.",
+            "author": { "@id": "https://kakul232.github.io/#person" },
+            "datePublished": "2026-07-01",
+            "keywords": "Accessibility, Section 508, SPA, Web Standards",
+            "url": "https://www.linkedin.com/in/kakulsarma/"
+          },
+          {
+            "@type": "TechArticle",
+            "position": 4,
+            "headline": "Next.js App Router vs. Pages Router: Enterprise Migration & Performance Benchmarks",
+            "description": "Deep dive into real-world migration strategies for large-scale enterprise portals. Analyzing streaming SSR, React Server Components (RSC), and edge caching pathways to slash Time to Interactive (TTI).",
+            "author": { "@id": "https://kakul232.github.io/#person" },
+            "datePublished": "2026-06-01",
+            "keywords": "Next.js, React, App Router, Performance Benchmarks",
+            "url": "https://www.linkedin.com/in/kakulsarma/"
+          },
+          {
+            "@type": "TechArticle",
+            "position": 5,
+            "headline": "Designing Resilient RESTful APIs with Node.js & Microservice State Machines",
+            "description": "Best practices for architecting decoupled, fault-tolerant API gateways. Implementing circuit breakers, distributed rate limiting, and idempotent mutation handlers in high-throughput enterprise environments.",
+            "author": { "@id": "https://kakul232.github.io/#person" },
+            "datePublished": "2026-05-01",
+            "keywords": "REST APIs, Node.js, Microservices, Resilience",
+            "url": "https://www.linkedin.com/in/kakulsarma/"
+          },
+          {
+            "@type": "TechArticle",
+            "position": 6,
+            "headline": "Building Autonomous AI Agents with Structured Tool Calling and Memory Buffers",
+            "description": "Exploring deterministic agent execution loops, MCP (Model Context Protocol), and memory persistence architectures for autonomous developer tooling and enterprise workflow orchestration.",
+            "author": { "@id": "https://kakul232.github.io/#person" },
+            "datePublished": "2026-04-01",
+            "keywords": "Autonomous Agents, Tool Calling, MCP, AI Systems",
+            "url": "https://www.linkedin.com/in/kakulsarma/"
+          }
+        ]
       }
     ]
   }
@@ -186,6 +334,7 @@
   <!-- ==========================================================================
        HERO SECTION
        ========================================================================== -->
+  <main id="main-content">
   <section class="hero-section" id="about">
     <div class="container hero-grid">
       <div class="hero-text-content">
@@ -204,6 +353,7 @@
         </div>
 
         <h1 class="hero-title">
+          <span class="sr-only">Kakul Sarma — Senior Full-Stack Engineer &amp; Application Consultant at IBM — </span>
           Python | JavaScript | <span class="gradient-text">GenAI &amp; Agentic AI</span>
         </h1>
 
@@ -345,7 +495,7 @@
           <div class="avatar-card">
             <img src="assets/images/profile.jpg"
               alt="Kakul Sarma - Senior Full-Stack Engineer and Application Consultant at IBM" class="avatar-img"
-              id="hero-avatar-img">
+              id="hero-avatar-img" width="340" height="340" fetchpriority="high">
             <div class="avatar-gradient-overlay">
               <span class="avatar-meta-name">Kakul Sarma</span>
               <span class="avatar-meta-company">
@@ -1861,7 +2011,7 @@
       <!-- GitHub Live Metrics Banner (Placed at End of Page) -->
       <div class="github-metrics-banner">
         <div class="github-metrics-info">
-          <img src="assets/images/profile.jpg" alt="kakul232 GitHub Profile" class="github-avatar">
+          <img src="assets/images/profile.jpg" alt="kakul232 GitHub Profile" class="github-avatar" width="60" height="60" loading="lazy" decoding="async">
           <div class="github-user-details">
             <h4>Kakul Sarma (@kakul232)</h4>
             <p>Active open source contributions &amp; code repositories on GitHub</p>
@@ -1896,6 +2046,7 @@
       </div>
     </div>
   </section>
+  </main>
 
   <!-- ==========================================================================
        SITE FOOTER
