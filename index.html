@@ -58,17 +58,26 @@
   <!-- Google Fonts: Roboto & Google Sans (Material Design 3), JetBrains Mono, Outfit, Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  </noscript>
 
-  <!-- Devicon Programming Language & Development Tool Icons -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <!-- Material Symbols Outlined (Asynchronous with display=swap) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap">
+  </noscript>
+
+  <!-- Devicon Programming Language & Development Tool Icons (Asynchronous) -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  </noscript>
 
   <!-- Main Stylesheet (Material Design 3 Revamped) -->
-  <link rel="stylesheet" href="css/style.css?v=6.4">
+  <link rel="stylesheet" href="css/style.css?v=6.5">
 
   <!-- Schema.org Structured Data for Google Knowledge Graph & Entity Recognition -->
   <script type="application/ld+json">
@@ -2182,7 +2191,7 @@
   </button>
 
   <!-- Main JavaScript Controller -->
-  <script src="js/main.js?v=6.2"></script>
+  <script src="js/main.js?v=6.2" defer></script>
 </body>
 
 </html>
