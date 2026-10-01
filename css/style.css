@@ -183,6 +183,16 @@ html {
   border-width: 0;
 }
 
+/* Devicon Font-Display Swap Override (Google Lighthouse CWV Optimization) */
+@font-face {
+  font-family: 'devicon';
+  src: url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/fonts/devicon.woff?qd25fp') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/fonts/devicon.ttf?qd25fp') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   font-family: var(--font-body);
   background-color: var(--bg-primary);
