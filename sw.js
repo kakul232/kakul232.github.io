@@ -7,7 +7,7 @@ const CACHE_NAME = 'ks-portfolio-v2';
 const PRECACHE_ASSETS = [
   './',
   './index.html',
-  './css/style.min.css?v=7.0',
+  './css/style.min.css?v=7.1',
   './css/devicon-subset.min.css?v=7.0',
   './js/main.min.js?v=7.0',
   './assets/images/profile.jpg',
