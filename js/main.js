@@ -21,7 +21,19 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initMaterialRipple();
   initFabScroll();
+  initServiceWorker();
 });
+
+/* Service Worker Registration for Offline Caching & Repeat Visitor Speed */
+function initServiceWorker() {
+  if ('serviceWorker' in navigator && window.location.protocol.startsWith('http')) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js')
+        .then((reg) => console.log('[Service Worker] Registered:', reg.scope))
+        .catch((err) => console.warn('[Service Worker] Failed:', err.message));
+    });
+  }
+}
 
 /* ==========================================================================
    0. ENTERPRISE & RELEVANT EXPERIENCE CALCULATOR
