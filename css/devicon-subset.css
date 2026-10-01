@@ -1,0 +1,98 @@
+@font-face {
+  font-family: "devicon";
+  src: url("https://cdn.jsdelivr.net/gh/devicons/devicon@latest/fonts/devicon.woff?qd25fp") format("woff"),
+       url("https://cdn.jsdelivr.net/gh/devicons/devicon@latest/fonts/devicon.ttf?qd25fp") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+[class^="devicon-"],[class*=" devicon-"] {
+  font-family: 'devicon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.devicon-python-plain:before{content:""}
+.devicon-python-plain-wordmark:before{content:""}
+.devicon-python-plain.colored,.devicon-python-plain-wordmark.colored{color:#ffd845}
+.devicon-tensorflow-original:before{content:""}
+.devicon-tensorflow-original-wordmark:before{content:""}
+.devicon-tensorflow-original.colored,.devicon-tensorflow-original-wordmark.colored,.devicon-tensorflow-line.colored,.devicon-tensorflow-line-wordmark.colored{color:#ff6f00}
+.devicon-react-original:before,.devicon-react-plain:before{content:""}
+.devicon-react-original-wordmark:before,.devicon-react-plain-wordmark:before{content:""}
+.devicon-react-original.colored,.devicon-react-original-wordmark.colored,.devicon-react-plain.colored,.devicon-react-plain-wordmark.colored{color:#61dafb}
+.devicon-angularjs-plain-wordmark:before{content:""}
+.devicon-angularjs-plain:before{content:""}
+.devicon-angularjs-plain.colored,.devicon-angularjs-plain-wordmark.colored{color:#c4473a}
+.devicon-nodejs-plain-wordmark:before{content:""}
+.devicon-nodejs-plain:before{content:""}
+.devicon-nodejs-plain.colored,.devicon-nodejs-plain-wordmark.colored,.devicon-nodejs-line.colored,.devicon-nodejs-line-wordmark.colored{color:#5fa04e}
+.devicon-nextjs-plain-wordmark:before{content:""}
+.devicon-nextjs-plain:before{content:""}
+.devicon-nextjs-plain.colored,.devicon-nextjs-line.colored,.devicon-nextjs-line-wordmark.colored,.devicon-nextjs-plain-wordmark.colored{color:#000}
+.devicon-webpack-plain:before{content:""}
+.devicon-webpack-plain-wordmark:before{content:""}
+.devicon-webpack-plain.colored,.devicon-webpack-plain-wordmark.colored{color:#1c78c0}
+.devicon-amazonwebservices-plain-wordmark:before,.devicon-amazonwebservices-plain:before{content:""}
+.devicon-amazonwebservices-plain-wordmark.colored,.devicon-amazonwebservices-line-wordmark.colored,.devicon-amazonwebservices-original.colored,.devicon-amazonwebservices-plain.colored,.devicon-amazonwebservices-line.colored{color:#f90}
+.devicon-typescript-plain:before,.devicon-typescript-original:before{content:""}
+.devicon-typescript-plain.colored,.devicon-typescript-original.colored{color:#007acc}
+.devicon-mongodb-plain:before{content:""}
+.devicon-mongodb-plain-wordmark:before{content:""}
+.devicon-mongodb-plain.colored,.devicon-mongodb-plain-wordmark.colored{color:#4faa41}
+.devicon-express-original:before{content:""}
+.devicon-express-original-wordmark:before{content:""}
+.devicon-express-original.colored,.devicon-express-original-wordmark.colored{color:#444}
+.devicon-javascript-plain:before{content:""}
+.devicon-javascript-plain.colored{color:#f0db4f}
+.devicon-php-plain:before{content:""}
+.devicon-php-plain.colored{color:#777bb3}
+.devicon-mysql-plain:before{content:""}
+.devicon-mysql-plain-wordmark:before{content:""}
+.devicon-mysql-plain-wordmark.colored,.devicon-mysql-plain.colored{color:#00618a}
+.devicon-redux-original:before,.devicon-redux-plain:before{content:""}
+.devicon-redux-original.colored,.devicon-redux-plain.colored{color:#764abc}
+.devicon-html5-plain:before{content:""}
+.devicon-html5-plain-wordmark:before{content:""}
+.devicon-html5-plain.colored,.devicon-html5-plain-wordmark.colored{color:#e54d26}
+.devicon-sass-original:before,.devicon-sass-plain:before{content:""}
+.devicon-sass-original.colored,.devicon-sass-plain.colored{color:#c69}
+.devicon-fastapi-plain:before{content:""}
+.devicon-fastapi-plain-wordmark:before{content:""}
+.devicon-fastapi-plain.colored,.devicon-fastapi-plain-wordmark.colored{color:#009688}
+.devicon-postgresql-plain:before{content:""}
+.devicon-postgresql-plain-wordmark:before{content:""}
+.devicon-postgresql-plain.colored,.devicon-postgresql-plain-wordmark.colored{color:#336791}
+.devicon-jupyter-plain:before{content:""}
+.devicon-jupyter-plain-wordmark:before{content:""}
+.devicon-jupyter-plain.colored,.devicon-jupyter-plain-wordmark.colored{color:#f37726}
+.devicon-firebase-plain:before{content:""}
+.devicon-firebase-plain-wordmark:before{content:""}
+.devicon-firebase-plain.colored,.devicon-firebase-plain-wordmark.colored,.devicon-firebase-line.colored,.devicon-firebase-line-wordmark.colored{color:#ffa000}
+.devicon-googlecloud-plain:before{content:""}
+.devicon-googlecloud-plain-wordmark:before{content:""}
+.devicon-googlecloud-plain.colored,.devicon-googlecloud-plain-wordmark.colored{color:#557ebf}
+.devicon-git-plain:before{content:""}
+.devicon-git-plain-wordmark:before{content:""}
+.devicon-git-plain.colored,.devicon-git-plain-wordmark.colored{color:#f34f29}
+.devicon-bash-plain:before{content:""}
+.devicon-bash-plain.colored{color:#293138}
+.devicon-linux-plain:before{content:""}
+.devicon-linux-plain.colored{color:#000}
+.devicon-ssh-original:before,.devicon-ssh-plain:before{content:""}
+.devicon-ssh-original-wordmark:before,.devicon-ssh-plain-wordmark:before{content:""}
+.devicon-ssh-original.colored,.devicon-ssh-original-wordmark.colored,.devicon-ssh-plain.colored,.devicon-ssh-plain-wordmark.colored{color:#231f20}
+.devicon-docker-plain:before{content:""}
+.devicon-docker-plain-wordmark:before{content:""}
+.devicon-docker-plain.colored,.devicon-docker-plain-wordmark.colored{color:#019bc6}
+.devicon-drupal-plain:before{content:""}
+.devicon-drupal-plain-wordmark:before{content:""}
+.devicon-drupal-plain.colored,.devicon-drupal-plain-wordmark.colored{color:#0073ba}
+.devicon-wordpress-plain:before{content:""}
+.devicon-wordpress-plain-wordmark:before{content:""}
+.devicon-wordpress-plain.colored,.devicon-wordpress-plain-wordmark.colored{color:#494949}

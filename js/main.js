@@ -137,14 +137,20 @@ function initExperienceCalculator() {
 function initParticleBackground() {
   const canvas = document.getElementById('canvas-bg');
   if (!canvas) return;
+
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+
   const ctx = canvas.getContext('2d');
 
   let width = (canvas.width = window.innerWidth);
   let height = (canvas.height = window.innerHeight);
 
+  const isMobile = width < 768;
   const particles = [];
-  const particleCount = Math.min(Math.floor((width * height) / 14000), 85);
-  const maxDistance = 140;
+  const particleCount = isMobile ? 16 : Math.min(Math.floor((width * height) / 14000), 85);
+  const maxDistance = isMobile ? 85 : 140;
   let mouse = { x: -1000, y: -1000, radius: 160 };
 
   window.addEventListener('resize', () => {
@@ -160,6 +166,14 @@ function initParticleBackground() {
   window.addEventListener('mouseout', () => {
     mouse.x = -1000;
     mouse.y = -1000;
+  });
+
+  let isVisible = true;
+  document.addEventListener('visibilitychange', () => {
+    isVisible = !document.hidden;
+    if (isVisible) {
+      requestAnimationFrame(animate);
+    }
   });
 
   class Particle {
@@ -204,6 +218,7 @@ function initParticleBackground() {
   }
 
   function animate() {
+    if (!isVisible) return;
     ctx.clearRect(0, 0, width, height);
 
     for (let i = 0; i < particles.length; i++) {
@@ -724,7 +739,7 @@ function renderBadgesView() {
     const credlyUrl = b.credlyUrl || `https://www.credly.com/badges/${b.id}`;
 
     const imgMarkup = b.imageUrl
-      ? `<img src="${escapeHTML(b.imageUrl)}" alt="${escapeHTML(b.title)}" class="badge-credly-img" width="84" height="84" loading="lazy" onerror="this.onerror=null; this.src='assets/favicon.svg';">`
+      ? `<img src="${escapeHTML(b.imageUrl)}" alt="${escapeHTML(b.title)}" class="badge-credly-img" width="84" height="84" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='assets/favicon.svg';">`
       : `<div class="badge-icon-wrap">&#x1F3C5;</div>`;
 
     card.innerHTML = `
