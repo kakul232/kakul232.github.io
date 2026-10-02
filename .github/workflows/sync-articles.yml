@@ -28,6 +28,7 @@ jobs:
 
       - name: Run Articles Synchronization
         env:
+          ORCID_ID: '0009-0004-4327-501X'
           LINKEDIN_FEED_URL: ${{ secrets.LINKEDIN_FEED_URL }}
           ARTICLES_RSS_URL: ${{ secrets.ARTICLES_RSS_URL }}
         run: node scripts/sync_articles.js

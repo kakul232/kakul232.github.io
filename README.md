@@ -16,7 +16,7 @@ A modern, high-performance personal portfolio website for **Kakul Sarma** (`kaku
 - **Procedural Waveform Playground:** Interactive real-time audio-visual canvas with speed, harmonic frequency, and chroma spectrum controls.
 - **Theme Switcher:** Seamlessly switch between **Neon Cyber**, **Aurora Violet**, and **Cyberpunk Amber** themes.
 - **Direct Connect & Email Copy:** One-click copy for `kakulsarma@gmail.com` and `Kakul.Sarma@ibm.com`.
-- **30-Day Automated Article Sync:** Scheduled GitHub Actions cron (`sync-articles.yml`) that automatically synchronizes the top 6 technical articles and publications every 30 days directly from `assets/data/articles.json`.
+- **30-Day Automated Research & Badges Sync:** Scheduled GitHub Actions cron (`sync-articles.yml`) that automatically synchronizes verified research publications from CERN Zenodo (ORCID: `0009-0004-4327-501X`) and Credly verified badges into `assets/data/articles.json` and `assets/data/badges.json`.
 - **Zero-Dependency Fast Loading:** Built with pure semantic HTML5, Vanilla CSS3, and modern JavaScript for maximum speed and 100/100 Lighthouse scores.
 
 ---

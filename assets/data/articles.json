@@ -1,56 +1,11 @@
 [
   {
-    "id": "art-1",
-    "title": "Architecting Scalable Micro-Frontends with Module Federation in Enterprise Next.js",
-    "snippet": "How to isolate autonomous business domains using Webpack Module Federation while eliminating global bundle overhead, unifying design systems, and retaining instant client rendering speeds across distributed squads.",
-    "tag": "Micro-Frontends",
-    "readTime": "6 min read",
-    "date": "September 2026",
-    "url": "https://www.linkedin.com/in/kakulsarma/"
-  },
-  {
-    "id": "art-2",
-    "title": "Operationalizing watsonx.ai & RAG Pipelines in Production JavaScript Backends",
-    "snippet": "A pragmatic guide to bridging enterprise LLM capabilities (watsonx.ai, OpenAI) with Node.js microservices. Covers vector embeddings, context chunking, prompt engineering, and intelligent fallback strategies for mission-critical apps.",
-    "tag": "GenAI & watsonx.ai",
-    "readTime": "8 min read",
-    "date": "August 2026",
-    "url": "https://www.linkedin.com/in/kakulsarma/"
-  },
-  {
-    "id": "art-3",
-    "title": "Section 508 Compliance & High-Performance Rendering in Large-Scale SPAs",
-    "snippet": "Ensuring inclusive design and full Section 508 legal compliance without sacrificing rendering velocity. Architectural patterns for ARIA live regions, keyboard navigation flows, and automated contrast verification.",
-    "tag": "Accessibility & Standards",
-    "readTime": "5 min read",
-    "date": "July 2026",
-    "url": "https://www.linkedin.com/in/kakulsarma/"
-  },
-  {
-    "id": "art-4",
-    "title": "Next.js App Router vs. Pages Router: Enterprise Migration & Performance Benchmarks",
-    "snippet": "Deep dive into real-world migration strategies for large-scale enterprise portals. Analyzing streaming SSR, React Server Components (RSC), and edge caching pathways to slash Time to Interactive (TTI).",
-    "tag": "Next.js & React",
-    "readTime": "7 min read",
-    "date": "June 2026",
-    "url": "https://www.linkedin.com/in/kakulsarma/"
-  },
-  {
-    "id": "art-5",
-    "title": "Designing Resilient RESTful APIs with Node.js & Microservice State Machines",
-    "snippet": "Best practices for architecting decoupled, fault-tolerant API gateways. Implementing circuit breakers, distributed rate limiting, and idempotent mutation handlers in high-throughput enterprise environments.",
-    "tag": "Backend Architecture",
-    "readTime": "6 min read",
-    "date": "May 2026",
-    "url": "https://www.linkedin.com/in/kakulsarma/"
-  },
-  {
-    "id": "art-6",
-    "title": "Building Autonomous AI Agents with Structured Tool Calling and Memory Buffers",
-    "snippet": "Exploring deterministic agent execution loops, MCP (Model Context Protocol), and memory persistence architectures for autonomous developer tooling and enterprise workflow orchestration.",
-    "tag": "AI Systems",
-    "readTime": "9 min read",
-    "date": "April 2026",
-    "url": "https://www.linkedin.com/in/kakulsarma/"
+    "id": "zenodo-23110850",
+    "title": "Deterministic Vulnerability Compliance: Automating Match/Mismatch Verification via AST Reachability and Cryptographic VEX Attestation",
+    "snippet": "Regulatory compliance frameworks (SOC 2, ISO 27001, FedRAMP, and NIST SP 800-218) require continuous identification and mitigation of third-party software vulnerabilities. Traditional Software Comp...",
+    "tag": "Software Supply Chain Security",
+    "readTime": "DOI: 10.5281/zenodo.23110850",
+    "date": "October 2026",
+    "url": "https://doi.org/10.5281/zenodo.23110850"
   }
 ]
