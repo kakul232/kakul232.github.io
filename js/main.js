@@ -399,7 +399,9 @@ function initTerminal() {
     - Principle of least privilege for Model Context Protocol (MCP) tool execution
     - Human-in-the-loop (HITL) gates for high-impact API integrations`,
 
-    badges: `Verified Professional Badges (IBM / Credly):
+    badges: () => {
+      const total = globalBadgesData.length || 29;
+      return `Verified Professional Badges (IBM / Credly &bull; ${total} Total):
   1. Application Consultant - Cloud Full Stack (IBM)
   2. IBM watsonx Essentials (IBM)
   3. Generative AI Engineering Foundations (IBM)
@@ -408,7 +410,8 @@ function initTerminal() {
   6. IBM watsonx.ai Deep Dive (IBM / Credly)
   7. Enterprise Design Thinking Practitioner (IBM)
   8. IBM Agile Explorer (IBM)
-  Profile: <a href="https://www.credly.com/users/kakul-sarma.a09a1b12" target="_blank" class="term-highlight">credly.com/users/kakul-sarma.a09a1b12</a>`,
+  Profile: <a href="https://www.credly.com/users/kakul-sarma.a09a1b12" target="_blank" class="term-highlight">credly.com/users/kakul-sarma.a09a1b12</a>`;
+    },
 
     skills: () => {
       const exp = window.autoCalculatedExperience;
@@ -841,6 +844,38 @@ function scrollToBadges() {
 function setupBadgeFilters() {
   const filterBtns = document.querySelectorAll('.badge-filter-btn');
   if (!filterBtns.length) return;
+
+  // Calculate live dynamic counts from globalBadgesData
+  const counts = { all: globalBadgesData.length, ai: 0, cloud: 0, enterprise: 0 };
+  globalBadgesData.forEach(b => {
+    if (b.category && counts[b.category] !== undefined) {
+      counts[b.category]++;
+    }
+  });
+
+  // Update button labels with live counts
+  filterBtns.forEach((btn) => {
+    const filter = btn.getAttribute('data-filter') || 'all';
+    if (filter === 'all') {
+      btn.textContent = `All Badges (${counts.all})`;
+    } else if (filter === 'ai') {
+      btn.innerHTML = `&#x1F916; Agentic AI &amp; watsonx (${counts.ai})`;
+    } else if (filter === 'cloud') {
+      btn.innerHTML = `&#x2601;&#xFE0F; Cloud &amp; Full-Stack (${counts.cloud})`;
+    } else if (filter === 'enterprise') {
+      btn.innerHTML = `&#x1F3DB;&#xFE0F; Enterprise &amp; Agile (${counts.enterprise})`;
+    }
+  });
+
+  // Also update section title badge count if element exists
+  const badgeTitleSpan = document.querySelector('#badges .section-title .gradient-text');
+  if (badgeTitleSpan) {
+    badgeTitleSpan.textContent = `IBM & Credly Badges (${counts.all})`;
+  }
+  const badgeDesc = document.querySelector('#badges .section-desc');
+  if (badgeDesc) {
+    badgeDesc.textContent = `${counts.all} officially certified industry credentials from IBM, Anthropic, AWS, and MongoDB validating expertise in Agentic AI, watsonx, full-stack architecture, and AI cybersecurity.`;
+  }
 
   filterBtns.forEach((btn) => {
     btn.addEventListener('click', () => {

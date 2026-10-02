@@ -3,13 +3,13 @@
  * Optimizes repeat visitor performance, asset caching, and offline access.
  */
 
-const CACHE_NAME = 'ks-portfolio-v4';
+const CACHE_NAME = 'ks-portfolio-v5';
 const PRECACHE_ASSETS = [
   './',
   './index.html',
   './css/style.min.css?v=7.1',
   './css/devicon-subset.min.css?v=7.0',
-  './js/main.min.js?v=7.1',
+  './js/main.min.js?v=7.2',
   './assets/images/profile.webp',
   './assets/images/profile-thumb.webp',
   './assets/images/profile.jpg',
