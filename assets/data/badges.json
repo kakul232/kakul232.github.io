@@ -1,5 +1,22 @@
 [
   {
+    "id": "07249889-0499-478e-8dcb-c2bb29edabb5",
+    "title": "Certified Partner Specialist Gemini Enterprise Agent Development",
+    "description": "The Certified Partner Specialist: Gemini Enterprise Agent Development certification demonstrates a specialty in working with coding agents using agent-specific skills, building agents using Agent Development Kit (ADK), enhancing their capabilities with protocols like MCP and A2A, engineering sessions and memory, and governing agentic ecosystems.",
+    "issuer": "Google Cloud",
+    "issuedDate": "Oct 2026",
+    "rawDate": "2026-10-02",
+    "imageUrl": "https://images.credly.com/images/73e93208-0df3-435d-b58c-07c8ee6019d9/blob",
+    "credlyUrl": "https://www.credly.com/badges/07249889-0499-478e-8dcb-c2bb29edabb5",
+    "category": "enterprise",
+    "skills": [
+      "Agent Development Kit",
+      "Agents",
+      "Gemini Enterprise",
+      "Memory Management"
+    ]
+  },
+  {
     "id": "8a6350e6-f650-4e64-9e90-1fa39a79aa59",
     "title": "Evaluate and Improve Agent Development Kit Agents",
     "description": "Complete the Evaluate and Improve Agent Development Kit Agents skill badge to demonstrate your ability to use ADK's evaluation tools to \"hill climb\", making measurable, iterative improvements to an agent. You will run an initial evaluation to establish a baseline, apply optimization techniques, and re-evaluate the agent to measure your success.",
